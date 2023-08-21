@@ -63,76 +63,57 @@
         </div>
         </div>
     </nav>
+    {% endif %}
     <!-- General page code blocks  -->
-        {% endif %}
-
         {% block content %}
         <!-- Based on the various pages of the application it depends what content is displayed here -->
         {% endblock %}
     <!-- Footer code blocks  -->
     {% if user.is_authenticated %}
-        <footer class="fixed-bottom">
-            <div class="text-center p-3">CHANGE BACKGROUND COLOR
-                &copy <script>document.write(new Date().getFullYear())</script> | Kyle Chart | <a target="_blank" aria-label="Opens up Kyle Charts github" href="https://www.github.com/mrekyle"><i class="fa-brands fa-github git-link"></i></a>
-            </div>
-        </footer>
+    <footer class="fixed-bottom">
+        <div class="f-bg text-center p-2">
+            &copy  <script>document.write(new Date().getFullYear())</script> |  Kyle Chart |  <a target="_blank" aria-label="Opens up Kyle Charts github" href="https://www.github.com/mrekyle"><i class="fa-brands fa-github git-link"></i></a>
+        </div>
+    </footer>
     {% else %}
     <footer class=" fixed-bottom bg-primary text-white text-center text-lg-start">
-        <!-- Grid container -->
         <div class="container p-4">
-          <!--Grid row-->
           <div class="row">
-            <!--Grid column-->
-            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-              <h5 class="text-uppercase">Footer Content</h5>
-      
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
-                voluptatem veniam, est atque cumque eum delectus sint!
+            <div class="col-lg-5 col-md-12 mb-4 mb-md-0">
+              <p class="pt-3">
+                The MyStockTake platform is designed to stream line your monthly kitchen tasks.
+                By providing the tools to make the Stock Taking process, we aim to make this dreaded task an enjoyable one. 
               </p>
             </div>
-            <!--Grid column-->
-      
-            <!--Grid column-->
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase">Links</h5>
-      
-              <ul class="list-unstyled mb-0">
-                <li>
-                  <a href="#!" class="text-white">Link 1</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-white">Link 2</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-white">Link 3</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-white">Link 4</a>
-                </li>
-              </ul>
+              <h5 class="text-uppercase text-center">Links</h5>
+              <div>
+                <ul class="list-unstyled mb-0 text-center">
+                    <li>
+                    <a href="#!" class="text-white">Link 1</a>
+                    </li>
+                    <li>
+                    <a href="#!" class="text-white">Link 2</a>
+                    </li>
+                    <li>
+                    <a href="#!" class="text-white">Link 3</a>
+                    </li>
+                    <li>
+                    <a href="#!" class="text-white">Link 4</a>
+                    </li>
+                </ul>
+                </div>
             </div>
-            <!--Grid column-->
-      
-            <!--Grid column-->
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase mb-0">Contact Us</h5>
-      
+              <h5 class="text-uppercase mb-0 text-center">Contact Us</h5>
             </div>
-            <!--Grid column-->
           </div>
-          <!--Grid row-->
         </div>
-        <!-- Grid container -->
-      
-        <!-- Copyright -->
-        <div class="text-center p-3">CHANGE BACKGROUND COLOR
-          &copy <script>document.write(new Date().getFullYear())</script> | Kyle Chart | <a target="_blank" aria-label="Opens up Kyle Charts github" href="https://www.github.com/mrekyle"><i class="fa-brands fa-github git-link"></i></a>
-        </div>
-        <!-- Copyright -->
-      </footer>
     {% endif %}
+    <div class="f-bg text-center p-2">
+        &copy  <script>document.write(new Date().getFullYear())</script> |  Kyle Chart |  <a target="_blank" aria-label="Opens up Kyle Charts github" href="https://www.github.com/mrekyle"><i class="fa-brands fa-github git-link"></i></a>
+    </div>
+    </footer>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"></script>
 </body>
 </html>

@@ -2,3 +2,12 @@
     color: white;
     font-size: 20px;
 }
+
+.f-bg {
+    background-color: #444544;
+    color: white;
+}
+
+.page-selected {
+    background-color: aqua;
+}
