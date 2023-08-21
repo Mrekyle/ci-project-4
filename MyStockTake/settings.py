@@ -30,9 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    os.environ.get('TRUSTED_HOST'), os.environ.get('LOCAL_HOST')
-    ]
+ALLOWED_HOSTS = os.environ.get('TRUSTED_HOST, LOCAL_HOST')
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
