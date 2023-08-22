@@ -16,9 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from stocktake.views import render_base
+from stocktake.views import (
+    renderBase,
+    renderContact,
+    renderIndex,
+    renderLogin,
+    renderPricing,
+)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', render_base, name='stocktake'),
+    path('', renderBase, name='stocktake'),
+    path('pricing/', renderPricing, name='pricing'),
+    path('contactus/', renderContact, name='contactus'),
+    path('login/', renderLogin, name='login'),
 ]
