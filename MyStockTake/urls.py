@@ -26,7 +26,7 @@ from stocktake.views import (
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', renderBase, name='stocktake'),
+    path('', renderBase, name='home'),
     path('pricing/', renderPricing, name='pricing'),
     path('contactus/', renderContact, name='contactus'),
     path('login/', renderLogin, name='login'),

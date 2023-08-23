@@ -7,21 +7,21 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/static/css/style.css"> 
-    <title>MyStockTake</title>
+    <title>MyRecipe</title>
 </head>
 <body>
     <!-- Navigation code blocks -->
         {% if user.is_authenticated %}
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-            <a class="navbar-brand" href="#">code|MyStockTake</a>
+            <a class="navbar-brand" href="#">code|MyRecipe</a>
             <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Stock Take</a>
+                    <a class="nav-link active" aria-current="page" href="#">My Recipes</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contact Us</a>
@@ -41,23 +41,23 @@
 
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-        <a class="navbar-brand" href="#">code|MyStockTake</a>
+        <a class="navbar-brand" href="#">code|MyRecipe</a>
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" href="{% url 'pricing' %}">Pricing</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" href="{% url 'contactus' %}">Contact Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
+                <a class="nav-link" href="{% url 'login' %}">Login</a>
             </li>
             </ul>
         </div>
@@ -81,8 +81,8 @@
           <div class="row">
             <div class="col-lg-5 col-md-12 mb-4 mb-md-0">
               <p class="pt-3">
-                The MyStockTake platform is designed to stream line your monthly kitchen tasks.
-                By providing the tools to make the Stock Taking process, we aim to make this dreaded task an enjoyable one. 
+                The MyRecipe platform is designed to stream line your recipe and menu creation process.
+                By providing the tools to make your recipe's, we aim to make this dreaded task an enjoyable one. 
               </p>
             </div>
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
@@ -111,7 +111,7 @@
         </div>
     {% endif %}
     <div class="f-bg text-center p-2">
-        &copy  <script>document.write(new Date().getFullYear())</script> |  Kyle Chart |  <a target="_blank" aria-label="Opens up Kyle Charts github" href="https://www.github.com/mrekyle"><i class="fa-brands fa-github git-link"></i></a>
+        &copy  <script>document.write(new Date().getFullYear())</script> MyRecipe |  Kyle Chart |  <a target="_blank" aria-label="Opens up Kyle Charts github" href="https://www.github.com/mrekyle"><i class="fa-brands fa-github git-link"></i></a>
     </div>
     </footer>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"></script>
