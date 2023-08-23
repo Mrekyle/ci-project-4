@@ -24,7 +24,7 @@
                     <a class="nav-link active" aria-current="page" href="#">My Recipes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
+                    <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Account</a>
@@ -54,7 +54,7 @@
                 <a class="nav-link" href="{% url 'pricing' %}">Pricing</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'contactus' %}">Contact Us</a>
+                <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'login' %}">Login</a>
@@ -67,7 +67,13 @@
     <!-- General page code blocks  -->
         {% block content %}
         <!-- Based on the various pages of the application it depends what content is displayed here -->
-        {% endblock %}
+        {% if user.is_authenticated %}
+
+        {% else %}
+
+        {% endif %}
+
+        {% endblock content %}
     <!-- Footer code blocks  -->
     {% if user.is_authenticated %}
     <footer class="fixed-bottom">

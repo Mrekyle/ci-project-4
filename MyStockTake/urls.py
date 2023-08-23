@@ -16,8 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from stocktake.views import (
-    renderBase,
+from templates.views import (
     renderContact,
     renderIndex,
     renderLogin,
@@ -26,8 +25,8 @@ from stocktake.views import (
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', renderBase, name='home'),
+    path('', renderIndex, name='home'),
     path('pricing/', renderPricing, name='pricing'),
-    path('contactus/', renderContact, name='contactus'),
+    path('contactus/', renderContact, name='contact'),
     path('login/', renderLogin, name='login'),
 ]
