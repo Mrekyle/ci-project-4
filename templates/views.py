@@ -13,3 +13,6 @@ def renderLogin(request):
 
 def renderPricing(request):
     return render(request, 'pricing.html', {})
+
+def renderAccount(request):
+    return render(request, 'useraccount.html', {})

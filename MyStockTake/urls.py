@@ -20,6 +20,7 @@ from templates.views import (
     renderContact,
     renderIndex,
     renderPricing,
+    renderAccount,
 )
 
 urlpatterns = [
@@ -27,5 +28,6 @@ urlpatterns = [
     path('', renderIndex, name='home'),
     path('pricing/', renderPricing, name='pricing'),
     path('contactus/', renderContact, name='contact'),
+    path('user-account/', renderAccount, name='account'),
     path('accounts/', include('allauth.urls')),
 ]

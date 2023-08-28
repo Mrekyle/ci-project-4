@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+<div class="container header-size">
+    hello world 
+</div>
+{% else %}
+<div class="container header-size">
+    Please register
+</div>
+{% endif %}
+
+{% endblock %}
