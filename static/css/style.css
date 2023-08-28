@@ -11,3 +11,11 @@
 .page-selected {
     background-color: aqua;
 }
+
+.header-size {
+    margin-top: 80px;
+}
+
+.index-slider {
+    height: 350px;
+}

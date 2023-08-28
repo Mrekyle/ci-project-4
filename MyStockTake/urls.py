@@ -19,7 +19,6 @@ from django.urls import path, include
 from templates.views import (
     renderContact,
     renderIndex,
-    renderLogin,
     renderPricing,
 )
 
@@ -28,5 +27,5 @@ urlpatterns = [
     path('', renderIndex, name='home'),
     path('pricing/', renderPricing, name='pricing'),
     path('contactus/', renderContact, name='contact'),
-    path('login/', renderLogin, name='login'),
+    path('accounts/', include('allauth.urls')),
 ]

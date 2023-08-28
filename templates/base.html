@@ -30,7 +30,7 @@
                     <a class="nav-link" href="#">Account</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Logout</a>
+                    <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                 </li>
                 </ul>
             </div>
@@ -57,7 +57,10 @@
                 <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'login' %}">Login</a>
+                <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_login' %}">Login</a>
             </li>
             </ul>
         </div>
@@ -76,13 +79,8 @@
         {% endblock content %}
     <!-- Footer code blocks  -->
     {% if user.is_authenticated %}
-    <footer class="fixed-bottom">
-        <div class="f-bg text-center p-2">
-            &copy  <script>document.write(new Date().getFullYear())</script> |  Kyle Chart |  <a target="_blank" aria-label="Opens up Kyle Charts github" href="https://www.github.com/mrekyle"><i class="fa-brands fa-github git-link"></i></a>
-        </div>
-    </footer>
     {% else %}
-    <footer class=" fixed-bottom bg-primary text-white text-center text-lg-start">
+    <footer class="bg-primary text-white text-center text-lg-start">
         <div class="container p-4">
           <div class="row">
             <div class="col-lg-5 col-md-12 mb-4 mb-md-0">
@@ -111,12 +109,12 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase mb-0 text-center">Contact Us</h5>
+              <button class="btn text-uppercase mb-0 text-center">Contact Us</button>
             </div>
           </div>
         </div>
     {% endif %}
-    <div class="f-bg text-center p-2">
+    <div class="f-bg text-center p-2 fixed-bottom">
         &copy  <script>document.write(new Date().getFullYear())</script> MyRecipe |  Kyle Chart |  <a target="_blank" aria-label="Opens up Kyle Charts github" href="https://www.github.com/mrekyle"><i class="fa-brands fa-github git-link"></i></a>
     </div>
     </footer>

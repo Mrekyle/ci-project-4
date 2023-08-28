@@ -2,5 +2,36 @@
 {% load static %}
 
 {% block content %}
-<h1 style="margin-top: 400px;">Hello world</h1>
+{% if user.is_authenticated %}
+<h1 class="header-size">
+    Hello World 
+</h1>
+{% else %}
+<div class="container header-size">
+    <div class="index-slider">
+        IMAGE SLIDER
+    </div>
+    <div>
+        <p>
+            Image cover text
+        </p>
+    </div>
+</div>
+<hr>
+<div>
+    <div class="container mb-9">
+        <div class="row text-center">
+            <div class="col-md col-sm-1">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum sunt dolor nam at commodi doloremque soluta facere voluptas alias quam! Similique debitis nisi ea illo veniam veritatis aperiam blanditiis eligendi.</p>
+            </div>
+            <div class="col-md col-sm-1">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium repellat consequatur doloremque itaque deserunt esse mollitia exercitationem tenetur corrupti quas iusto nam minus doloribus eum, quam animi, quaerat praesentium eos.</p>
+            </div>
+            <div class="col-md col-sm-1">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem distinctio fuga nemo voluptatem cupiditate dolor harum, nulla similique! Magnam soluta quam accusamus aspernatur non excepturi blanditiis quasi nisi voluptatibus fugiat!</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
 {% endblock %}
