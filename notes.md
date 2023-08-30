@@ -5,7 +5,8 @@ FONTS
 crispy forms?
 fix favicon
 ENABLE AUTO DEPLOYS
-page content 
+page content - Finish styling for index page - finish user account error page - build logged in user home(ci blog lessons)
+Build contact form - API
 DARK MODE
 design all templates for the allauth
 accounts page for editing account information
@@ -13,11 +14,9 @@ add user username into the navigation on base.html
 Fix login page styling 
 Database design 
 build models
-add 'blog' post from ci lesson
 404 page 
 update page selection in navbar js
 python/js testing
-contact forms api
 create admin panel with summernote and users
 add alert messages 
 
