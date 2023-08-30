@@ -2,6 +2,73 @@
 
 {% block content %}
 
-<h1 style="margin-top: 200px;"> Hello world this is the pricing page of the application!</h1>
+<section class="container header-size pt-2">
+    <div class="mt-4 mb-4 text-center">
+        <h1>Pricing</h1>
+        <p>
+            Here at myRecipe we provide the tools to make your menu design simple and easy. With a full range of tools to make dish creation 
+            as easy as possible for you. Browse our options below to see what fits your needs. Click the signup button on the card to be taken 
+            through to the signup page, to get started.
+        </p>
+    </div>
+    <hr>
+    <div class="container mt-5 mb-8">
+        <div class="row row-cols-1 row-cols-md-3 text-center">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Basic</h3>
+                        <p class="card-text">
+                            Our simplest set of features. But still as powerful as the rest.
+                            Allowing you to create your dream menu.
+                        </p>
+                        <ul class="pricing-cards">
+                            <li>Individual Dish Creation</li>
+                            <li>Allergen Controls</li>
+                            <li>Access to our catalog of user created dishes</li>
+                            <li>Generate a shopping list</li>
+                        </ul>
+                        <h4>Starting at: <strong>FREE</strong></h4>
+                    </div>
+                    <a href="{% url 'account_signup' %}" aria-label="Opens the link to the registration page"><button class="btn mb-4 btn-rounded btn-primary">Register</button></a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Intermediate</h3>
+                        <p class="card-text">
+                            With all the features of the basic tier, you also gain access to some more advanced tools
+                        </p>
+                        <ul class="pricing-cards">
+                            <li>Calorie Counting</li>
+                            <li>Menu Costing</li>
+                            <li>Stock Takes</li>
+                        </ul>
+                        <h4>Starting at: <strong><s>Coming Soon</s></strong></h4>
+                    </div>
+                    <a href="#" aria-label="Opens the link to the registration page"><button class="btn mb-4 btn-rounded btn-primary" href="#">Register</button></a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Pro</h3>
+                        <p class="card-text">
+                            With all the features of the Intermediate tier, you also gain access to tools that allow for entire menu creation, 
+                            intended for large restaurant groups.
+                        </p>
+                        <ul class="pricing-cards">
+                            <li>Group Menu's</li>
+                            <li>Ordering Reports</li>
+                        </ul>
+                        <h4>Starting at: <strong><s>Coming Soon</s></strong></h4>
+                    </div>
+                    <a href="#" aria-label="Opens the link to the registration page"><button class="btn mb-4 btn-rounded btn-primary" href="#">Register</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 {% endblock content %} 
