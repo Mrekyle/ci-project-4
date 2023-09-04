@@ -16,3 +16,6 @@ def renderPricing(request):
 
 def renderAccount(request):
     return render(request, 'useraccount.html', {})
+
+def renderRecipe(request):
+    return render(request, 'recipe.html', {})

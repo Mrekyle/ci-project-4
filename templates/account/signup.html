@@ -1,14 +1,14 @@
 {% extends "base.html" %} {% load i18n %} {% block head_title %}{% trans
 "Signup" %}{% endblock %} {% block content %}
-<div class="container header-size pt-4 mb-12">
+<div class="container header-size pt-4 mb-12 text-center">
   <div class="row">
-    <div class="col-md-8 mt-2 offset-md-2">
+    <div class="col-md-8 mt-1 offset-md-2">
       <h3>{% trans "Sign Up" %}</h3>
 
       <p>
-        Welcome back to myRecipe. Do you already have an
-        account? Then please
-        <a class="link" href="{{ login_url }}">sign in</a> instead. If not please continue.
+        Welcome back to myRecipe. <br>
+        Already have an account? Then please <a class="link" href="{{ login_url }}">log in</a> instead. <br>
+        If not please continue.
       </p>
     </div>
   </div>
