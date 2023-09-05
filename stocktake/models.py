@@ -9,12 +9,12 @@ class Recipes(models.Model):
     title = models.CharField(max_length=30)
     slug = models.SlugField(max_length=30, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='recipe_post')
-    recipe_desc = models.CharField(max_length=30, blank=True)
+    recipe_desc = models.CharField(max_length=150, blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     ingredients_list = models.TextField()
     methods_list = models.TextField()
-    status = models.IntegerField(choices=STATUS, default=0)
+    status = models.IntegerField(choices=STATUS, default=1)
     likes = models.ManyToManyField(User, related_name='recipe_likes', blank=True)
 
     class Meta:

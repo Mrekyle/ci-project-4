@@ -1,12 +1,12 @@
 allauth √
 mdn √
 elephant sql √
-FONTS
+FONTS √
 crispy forms?
 fix favicon
 ENABLE AUTO DEPLOYS
-page content - Finish styling for index page - finish user account error page - build logged in user home(ci blog lessons Database design 
-build models)
+page content - Finish styling for index page - finish user account error page - build logged in user home
+ci blog lessons Database design build models √
 Build contact form - API
 DARK MODE
 design all templates for the allauth
@@ -16,10 +16,11 @@ Fix login page styling √
 404 page 
 update page selection in navbar js
 python/js testing
-create admin panel with summernote and users
+create admin panel with summernote and users √
 add alert messages 
+Add recipie rendering to the index page. 
 
-UPDATE EVERYTHING TO THE MYRECIPIE INSTEAD OF STOCK TAKE
+UPDATE EVERYTHING TO THE MYRECIPIE INSTEAD OF STOCK TAKE √
 
 Create readme - dropdown for images
 manual testing html/js/python/lighthouse/css

@@ -1,4 +1,4 @@
-from ..templates import views 
+from . import views 
 from django.urls import path
 
 urlPatterns = [
@@ -6,5 +6,5 @@ urlPatterns = [
     path('/pricing/', views.renderPricing, name='pricing'),
     path('/contact/', views.renderContact, name='contact'),
     path('/user-account/', views.renderAccount, name='account'),
-    path('/recipes/', views.renderRecipe, name='recipes'),
+    path('/recipes/', views.renderRecipe.as_view(), name='recipes'),
 ]

@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from templates.views import (
+from stocktake.views import (
     renderContact,
     renderIndex,
     renderPricing,

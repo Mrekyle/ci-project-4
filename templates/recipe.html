@@ -2,8 +2,58 @@
 {% block content%}
 
 {% if user.is_authenticated %}
-<div class="container header-size">
+<div class="container-fluid header-size">
+    <div class="row">
+        <div class="col-12 mt-3 left">
+            <div class="row">
+                {% for recipe in recipe_list %}
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <div>
+                                        <p>{{ recipe.title }}</p>
+                                    </div>
+                                     <div>
+                                        <p>{{ recipe.recipe_desc }}</p>
+                                    </div>
+                                    <div class="image-flash">
+                                        <p class="author">Author: {{ recipe.author }}</p>
+                                        <p class="card-text text-muted">{{ recipe.created_on }} | {{ recipe.number_of_likes }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% if forloop.counter|divisibleby:3 %}
+            </div>
+            <div class="row">
+                {% endif %}
+                
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% if is_paginated %}
+  <nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+      {% if page_obj.has_previous %}
+      <li>
+        <a href="?page={{ page_obj.previous_page_number }}" class="page-link"
+          >&laquo; PREV
+        </a>
+      </li>
+      {% endif %} {% if page_obj.has_next %}
+      <li>
+        <a href="?page={{ page_obj.next_page_number }}" class="page-link">
+          NEXT &raquo;</a
+        >
+      </li>
 
+      {% endif %}
+    </ul>
+  </nav>
+  {% endif %}
 </div>
 {% else %}
 <div class="container header-size text-center">
