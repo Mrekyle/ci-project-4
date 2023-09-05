@@ -9,6 +9,7 @@ class Recipes(models.Model):
     title = models.CharField(max_length=30)
     slug = models.SlugField(max_length=30, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='recipe_post')
+    recipe_desc = models.CharField(max_length=30, blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     ingredients_list = models.TextField()

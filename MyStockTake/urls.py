@@ -26,6 +26,7 @@ from templates.views import (
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('summernote/', include('django_summernote.urls')),
     path('', renderIndex, name='home'),
     path('pricing/', renderPricing, name='pricing'),
     path('contactus/', renderContact, name='contact'),
