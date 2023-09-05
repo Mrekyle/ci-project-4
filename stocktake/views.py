@@ -30,25 +30,25 @@ class renderRecipe(generic.ListView):
     recipe = Recipes
     queryset = Recipes.objects.filter(status=1).order_by('-created_on')
     template_name = 'recipe.html'
-    paginate_by = 9
+    paginate_by = 6
 
 
-# class renderRecipePost(View):
+class renderRecipePost(View):
     
-#     def get(self, request, slug, *args, **kwargs):
-#         queryset = Recipes.objects.filter(status=1)
-#         post = get_object_or_404(queryset, slug=slug)
-#         comments = post.comments.order_by('created_on')xw
-#         liked = False
-#         if post.likes.filter(id=self.request.user.id).exists():
-#             liked = True
-#         return render(
-#             request,
-#             'recipe.html',
-#             {
-#                 'post': post,
-#                 'comments': comments,
-#                 'commented': False,
-#                 'liked': liked,
-#             },
-#         )
+    def get(self, request, slug, *args, **kwargs):
+        queryset = Recipes.objects.filter(status=1)
+        post = get_object_or_404(queryset, slug=slug)
+        comments = post.comments.order_by('created_on')
+        liked = False
+        if post.likes.filter(id=self.request.user.id).exists():
+            liked = True
+        return render(
+            request,
+            'recipe.html',
+            {
+                'post': post,
+                'comments': comments,
+                'commented': False,
+                'liked': liked,
+            },
+        )

@@ -3,9 +3,55 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-<h1 class="header-size">
-    Hello World 
-</h1>
+<div class="container header-size">
+    <div class="row">
+        <div class="text-center">
+            <h3>Get Started</h3>
+            <p class="ps-5 col-md-5 mt-4 mb-4">Get started by clicking on the <strong>New Recipe</strong> button below and fill out all the information on the next page 
+                to create your very first Recipe.<br> If you wish to edit or delete them, click on the edit button. <br>Which will take you there.<br>
+                To view all of your recipes you have created, click on the <strong>My Recipe's</strong> button.
+            </p>
+        </div>
+        <div class="">
+
+        </div>
+    </div>
+    <hr>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+          <!-- Toggle button -->
+            <div class="justify-content-center">
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarCenteredExample" aria-controls="navbarCenteredExample"
+                    aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+            </div>
+      
+          <!-- Collapsible wrapper -->
+          <div
+            class="collapse navbar-collapse justify-content-center" id="navbarCenteredExample" >
+            <!-- Left links -->
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#">My Recipe's</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Create New Recipe</a>
+              </li><li class="nav-item">
+                <a class="nav-link" href="#">Edit A Recipe</a>
+              </li>
+            </ul>
+            <!-- Left links -->
+          </div>
+          <!-- Collapsible wrapper -->
+        </div>
+        <!-- Container wrapper -->
+      </nav>
+      <hr>
+    <h3>The Latest Recipe's</h3>
+    <div class="container-fluid mb-6">
+
+    </div>
+</div>
 {% else %}
 <div class="container header-size">
     <div class="index-slider">

@@ -32,5 +32,5 @@ urlpatterns = [
     path('contactus/', renderContact, name='contact'),
     path('user-account/', renderAccount, name='account'),
     path('recipes/', renderRecipe, name='recipes'),
-    path('accounts/', include('allauth.urls')),
+    path('accounts/', include('allauth.urls'), name='accounts_urls'),
 ]

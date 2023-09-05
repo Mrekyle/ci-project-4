@@ -5,8 +5,14 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-<div class="container header-size">
-    hello world 
+<div class="container header-size text-center">
+    <div class="row">
+        <h2>Welcome {{ user.username }}</h2>
+        <p>Here you can edit some information for your account. Such as resetting your password.</p>
+        <ul style="list-style: none;">
+            <li><a href="{% url 'account_change_password' %}">Change your Password</a></li>
+        </ul>
+    </div>
 </div>
 {% else %}
 <div class="container header-size text-center">
