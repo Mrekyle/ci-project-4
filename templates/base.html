@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="vh-100" lang="en">
+<html class="" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,17 +9,17 @@
     <link rel="stylesheet" href="/static/css/style.css"> 
     <title>myRecipe</title>
 </head>
-<body onload="getPageUrl(); changeActive();">
+<body>
     <!-- Navigation code blocks -->
         {% if user.is_authenticated %}
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-            <a class="navbar-brand" href="#">code|myRecipe</a>
+            <a class="navbar-brand" href="{% url 'home' %}">code|myRecipe</a>
             <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
             <div>
-                <!-- <p>Welcome USERNAME</p> -->
+                <p>Welcome USERNAME</p>
             </div>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
@@ -47,7 +47,7 @@
 
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-        <a class="navbar-brand" href="#">code|myRecipe</a>
+        <a class="navbar-brand" href="{% url 'home' %}">code|myRecipe</a>
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
         </button>
@@ -103,9 +103,9 @@
           </div>
         </div>
     {% endif %}
-    <div class="f-bg text-center p-2">
-        &copy  <script>document.write(new Date().getFullYear())</script> myRecipe |  Kyle Chart |  <a target="_blank" aria-label="Opens up Kyle Charts github" href="https://www.github.com/mrekyle"><i class="fa-brands fa-github git-link"></i></a>
-    </div>
+        <div class="f-bg text-center p-2">
+            &copy  <script>document.write(new Date().getFullYear())</script> myRecipe |  Kyle Chart |  <a target="_blank" aria-label="Opens up Kyle Charts github" href="https://www.github.com/mrekyle"><i class="fa-brands fa-github git-link"></i></a>
+        </div>
     </footer>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"></script>
 </body>

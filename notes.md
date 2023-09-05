@@ -12,7 +12,7 @@ DARK MODE
 design all templates for the allauth
 accounts page for editing account information
 add user username into the navigation on base.html
-Fix login page styling 
+Fix login page styling √
 404 page 
 update page selection in navbar js
 python/js testing
