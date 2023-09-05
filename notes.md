@@ -1,31 +1,35 @@
-allauth √
-mdn √
-elephant sql √
-FONTS √
-crispy forms?
-fix favicon
-ENABLE AUTO DEPLOYS
-page content - Finish styling for index page - finish user account error page - build logged in user home
-ci blog lessons Database design build models √
-Build contact form - API Link to api and build email 
-DARK MODE
-design all templates for the allauth
-accounts page for editing account information
-add user username into the navigation on base.html
-Fix login page styling √
-404 page 
-update page selection in navbar js
-python/js testing
-create admin panel with summernote and users √
-add alert messages 
-Add recipe rendering to the index page. FIX PAGE!!!
-Rename the application youtube video
-Add sending emails to reset password 
+Pre Deployment:
 
-
-
-UPDATE EVERYTHING TO THE MYRECIPIE INSTEAD OF STOCK TAKE √
-
+Set debug to false
+Remove collect static on heroku
+Add admin accounts/generic accounts for submission
+Add 10 recipes to database - 3 users 
 Create readme - dropdown for images
 manual testing html/js/python/lighthouse/css
 Update github projects 
+Rename the applications/files
+Enable auto Deploys 
+
+TO DO:
+
+Finish all styling, responsiveness, page layouts
+Finish home page styling
+Build contact form api - Email service templates
+Add email function to reset password
+Add images and image cover text to home page 
+Update page selection in main navbar
+Favicon
+404 page
+Python/Js Testing
+Fix recipes page bug. Add recipe posting to the page and to registered users home. 
+Add author recipes to my recipes page.
+Add create new recipe functions with summernote editor 
+Add edit and delete functions - Add popup for are you sure about deleting the recipe
+Add random image generator to the registered users home page
+Add aria labels/semenatic code
+Add code block comments
+
+Maybe:
+ 
+Add alerts for log in/out/posting/editing
+Dark Mode
