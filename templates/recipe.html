@@ -13,17 +13,17 @@
                                 <div class="card-title">
                                   <a href="#" aria-label="Opens the recipe in a full screen view" class="card-link">
                                     <div>
-                                        {{ Recipes.title}}
-                                    </div>
-                                     <div>
-                                        {{ Recipes.recipe_desc }}
-                                    </div>
-                                    <div class="image-flash">
-                                      <hr>
-                                        <p class="author">Author: {{ Recipes.author }}</p>
-                                        <p class="card-text text-muted">{{ Recipes.created_on }} | {{ Recipes.number_of_likes }}</p>
+                                      <img class="" src="#" alt="Recipe Image">
+                                        <p class="image-flash">{{ Recipes.title }}</p>
                                     </div>
                                   </a>
+                                     <div class="text-muted">
+                                        {{ Recipes.recipe_desc | safe }}
+                                    </div>
+                                    <div class="">
+                                      <hr>
+                                        <p class="card-text text-muted">Author: {{ Recipes.author }} | {{ Recipes.created_on }}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

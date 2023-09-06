@@ -19,9 +19,11 @@ Add email function to reset password
 Add images and image cover text to home page 
 Update page selection in main navbar
 Favicon
-404 page
 Python/Js Testing
-Fix recipes page bug. Add recipe posting to the page and to registered users home. 
+Fix recipes page bug. √
+Add images to the recipes database/models - create default image 
+Recipe cards styling
+Add recipe posting to the page and to registered users home. 
 Add author recipes to my recipes page.
 Add create new recipe functions with summernote editor 
 Add edit and delete functions - Add popup for are you sure about deleting the recipe
