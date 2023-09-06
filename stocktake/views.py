@@ -27,7 +27,7 @@ from .models import Recipes
 
 class renderRecipe(generic.ListView):
     
-    recipe = Recipes
+    model = Recipes
     queryset = Recipes.objects.filter(status=1).order_by('-created_on')
     template_name = 'recipe.html'
     paginate_by = 6
