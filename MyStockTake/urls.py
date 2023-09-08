@@ -22,6 +22,10 @@ from stocktake.views import (
     renderPricing,
     renderAccount,
     renderRecipe,
+    renderRecipePage,
+    renderRecipeCreation,
+    renderMyRecipes,
+    renderRecipeEdit,
 )
 
 urlpatterns = [
@@ -32,5 +36,9 @@ urlpatterns = [
     path('contactus/', renderContact, name='contact'),
     path('user-account/', renderAccount, name='account'),
     path('recipes/', renderRecipe.as_view(), name='recipes'),
+    path('recipes-creation/', renderRecipeCreation, name='recipe_creation'),
+    path('recipes-edit/', renderRecipeEdit, name='recipe_edit'),
+    path('my-recipes/', renderMyRecipes, name='my_recipes'),
+    path('<slug:slug>/', renderRecipePage.as_view(), name='recipe_page'),
     path('accounts/', include('allauth.urls'), name='accounts_urls'),
 ]

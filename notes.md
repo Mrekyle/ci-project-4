@@ -25,11 +25,14 @@ Add images to the recipes database/models - create default image
 Recipe cards styling
 Add recipe posting to the page and to registered users home. 
 Add author recipes to my recipes page.
-Add create new recipe functions with summernote editor 
-Add edit and delete functions - Add popup for are you sure about deleting the recipe
+Add create new recipe functions with summernote editor - Page created 
+Add edit and delete functions - Add popup for are you sure about deleting the recipe - Page created
 Add random image generator to the registered users home page
 Add aria labels/semenatic code
 Add code block comments
+Fix bug on recipes page with auth.user.none
+Design Recipe-page page
+Add comments to recipe page page and likes
 
 Maybe:
  

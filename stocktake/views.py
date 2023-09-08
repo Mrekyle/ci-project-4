@@ -17,8 +17,14 @@ def renderPricing(request):
 def renderAccount(request):
     return render(request, 'useraccount.html', {})
 
-# def renderRecipe(request):
-#     return render(request, 'recipe.html', {})
+def renderRecipeCreation(request):
+    return render(request, 'recipe_create.html', {})
+
+def renderRecipeEdit(request):
+    return render(request, 'recipe_edit.html', {})
+
+def renderMyRecipes(request):
+    return render(request, 'my_recipes.html', {})
 
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
@@ -32,6 +38,11 @@ class renderRecipe(generic.ListView):
     template_name = 'recipe.html'
     paginate_by = 6
 
+class renderRecipePage(generic.ListView):
+    
+    model = Recipes
+    queryset = Recipes.objects.filter(status=1).order_by('-created_on')
+    template_name = 'recipe_page.html'
 
 # class renderRecipePost(View):
     
