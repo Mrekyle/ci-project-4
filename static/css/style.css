@@ -45,3 +45,12 @@ html, body {
     width: 55%;
     margin-bottom: 13rem;
 }
+
+.recipe-title {
+    padding-top: 0.3rem;
+    font-size: 1.3rem;
+}
+
+.recipe-subtitle {
+    padding-top: 0.3rem;
+}

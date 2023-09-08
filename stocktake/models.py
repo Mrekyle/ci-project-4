@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
+
 
 # Create your models here.
 
@@ -16,6 +18,7 @@ class Recipes(models.Model):
     methods_list = models.TextField()
     status = models.IntegerField(choices=STATUS, default=1)
     likes = models.ManyToManyField(User, related_name='recipe_likes', blank=True)
+    featured_image = CloudinaryField('image', default='placeholder')
 
     class Meta:
         ordering = ['-created_on']
