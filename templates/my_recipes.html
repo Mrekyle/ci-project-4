@@ -1,9 +1,64 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="container-fluid">
-        <div>
-            <h1 class="header-size">Hello world my recipes here</h1>
+
+{% if user.is_authenticated %}
+<div class="container-fluid header-size">
+    <div class="row">
+        <h1 class="header-size">Your Recipes</h1>
+        <p>Here you can find all of your own recipe's that you have created and uploaded to the platform.</p>
+        <p>If you wish to make an edit or delete a recipe please select that button from the cards and follow the next steps</p>
+    </div>
+    <div class="container">
+        <div class="row col-md-4">
+            {% for recipes in recipe_list %}
+                <div class="card">
+                    <div class="card-body">
+                        <a href="{% url 'recipe_page' Recipes.slug %}" aria-label="Opens the recipe in a full screen view" class="card-link">
+                            <div class="image-container masthead-text masthead-image">
+                            {% if 'placeholder' in Recipes.featured_image.url %}
+                                <img class="card-img card-image" src="https://res.cloudinary.com/dcjikvzf6/image/upload/v1692107043/cld-sample-4.jpg" alt="Recipe Image">
+                            {% else %}
+                                <img class="card-img card-image" src="{{ Recipes.featured_image.url }}" alt="Users image of there recipe">
+                            {% endif %}
+                            </div>
+                            <div class="">
+                            <h4 class="card-title text-center pt-1">{{ Recipes.title }}</h4>
+                            </div>
+                        </a>
+                        <hr>
+                        <p class="card-text">{{ recipe.created_on }} | <i class="fa-regular fa-thumbs-up fa-sm">{{ Recipes.likes }} FIX BUG</i></p>
+                        <div class="flex-container mt-2">
+                            <button type="submit">Edit</button>
+                            <button type="submit">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
+    {% if is_paginated %}
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+            <li>
+                <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV</a>
+            </li>
+            {% endif %} 
+            {% if page_obj.has_next %}
+            <li>
+                <a href="?page={{ page_obj.next_page_number }}" class="page-link">NEXT &raquo;</a>
+            </li>
+            {% endif %}
+            </ul>
+        </nav>
+    {% endif %}
+</div>
+{% else %}
+    <div class="container header-size text-center">
+        <h3>Unfortunately we do not know you! But we'd love to get to know you. So please join us on our adventure.</h3>
+        <h3>Please click below to check out what we offer, to see if you want to join us.</h3>
+        <a href="{% url 'pricing' %}" aria-label="Opens the Pricing page to allow the user to see what we offer"><button class="btn btn-rounded mb-5 btn-dark">What We Offer</button></a>
+    </div>
+{% endif %}
 {% endblock %}

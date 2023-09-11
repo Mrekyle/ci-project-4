@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+{% if user.is_authenticated %}
     <div class="container-fluid header-size">
         <div class="row">
             <h1 class="">Create a new recipe to add to our ever growing database.</h1>
         </div>
-        <form method="POST" action="">
+        <form method="POST" action="add">
             {% csrf_token %}
                 <div>
                     <label for="recipe-title">Recipe Title: </label>
@@ -37,4 +39,11 @@
                 </div>
         </form>
     </div>
+{% else %}
+    <div class="container header-size text-center">
+        <h3>Unfortunately we do not know you! But we'd love to get to know you. So please join us on our adventure.</h3>
+        <h3>Please click below to check out what we offer, to see if you want to join us.</h3>
+        <a href="{% url 'pricing' %}" aria-label="Opens the Pricing page to allow the user to see what we offer"><button class="btn btn-rounded mb-5 btn-dark">What We Offer</button></a>
+    </div>
+{% endif %}
 {% endblock %} 

@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib.auth.models import User
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Recipes
@@ -40,8 +41,12 @@ def renderRecipeCreation(request):
 def renderRecipeEdit(request):
     return render(request, 'recipe_edit.html', {})
 
-def renderMyRecipes(request):
-    return render(request, 'my_recipes.html', {})
+# class renderIndex(generic.ListView):
+
+#     model = Recipes
+#     queryset = Recipes.objects.filter(status=1).order_by('-created_on')
+#     template_name = 'index.html'
+#     paginate_by = 6
 
 class renderRecipe(generic.ListView):
     
@@ -49,6 +54,7 @@ class renderRecipe(generic.ListView):
     queryset = Recipes.objects.filter(status=1).order_by('-created_on')
     template_name = 'recipe.html'
     paginate_by = 6
+
 
 class renderRecipePage(View):
     
@@ -70,22 +76,17 @@ class renderRecipePage(View):
             },
         )
     
-# class renderRecipeCreation(View):
 
-#     def get(self, request):
-#         return render(request, 'recipE_create.html')
+class renderMyRecipes(View):
     
-#     def post(self, request):
-#         if request.method == 'POST':
-#             title = request.POST.get('title')
-#             description = request.POST.get('description')
-#             story = request.POST.get('story')
-#             ingredients = request.POST.get('ingredients')
-#             method = request.POST.get('method')
-#             img_upload = request.POST.get('image-upload')
+    def get(request):
+        queryset = Recipes.objects.filter(status=1)
+        recipe = get_object_or_404(queryset)
 
-#             Recipes.objects.create(title=title, description=description, 
-#                                    story=story, ingredients=ingredients, method=method)
-            
-#             return redirect('renderRecipePage')
-      
+        return render(
+            request, 
+            'my_recipes.html', 
+            {
+                'recipe': recipe,
+            },
+        )

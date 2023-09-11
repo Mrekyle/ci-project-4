@@ -15,6 +15,8 @@ TO DO:
 Finish all styling, responsiveness, page layouts
 Finish home page styling
 Styling for recipe full screen page 
+Add latest 3 recipe cards to index page
+Style recipe creation form - Add crispy forms? Add summernote editor to the recipe creation
 Build contact form api - Email service templates
 Add email function to reset password
 Add images and image cover text to home page 
