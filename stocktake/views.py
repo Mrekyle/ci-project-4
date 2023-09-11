@@ -1,5 +1,4 @@
-from django.shortcuts import render
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Recipes
@@ -22,7 +21,21 @@ def renderAccount(request):
     return render(request, 'useraccount.html', {})
 
 def renderRecipeCreation(request):
-    return render(request, 'recipe_create.html', {})
+    
+    if request.method == 'POST':
+            title = request.POST.get('title')
+            recipe_desc = request.POST.get('recipe_desc')
+            recipe_story = request.POST.get('recipe_story')
+            ingredients_list = request.POST.get('ingredients_list')
+            methods_list = request.POST.get('method_list')
+            # img_upload = request.POST.get('image-upload')
+
+            Recipes.objects.create(title=title, recipe_desc=recipe_desc, recipe_story=recipe_story, ingredients_list=ingredients_list, methods_list=methods_list)
+            
+            return redirect('recipe.html')
+    
+    if request.method == 'GET':
+        return render(request, 'recipe_create.html', {})
 
 def renderRecipeEdit(request):
     return render(request, 'recipe_edit.html', {})
@@ -57,3 +70,22 @@ class renderRecipePage(View):
             },
         )
     
+# class renderRecipeCreation(View):
+
+#     def get(self, request):
+#         return render(request, 'recipE_create.html')
+    
+#     def post(self, request):
+#         if request.method == 'POST':
+#             title = request.POST.get('title')
+#             description = request.POST.get('description')
+#             story = request.POST.get('story')
+#             ingredients = request.POST.get('ingredients')
+#             method = request.POST.get('method')
+#             img_upload = request.POST.get('image-upload')
+
+#             Recipes.objects.create(title=title, description=description, 
+#                                    story=story, ingredients=ingredients, method=method)
+            
+#             return redirect('renderRecipePage')
+      

@@ -14,15 +14,14 @@ TO DO:
 
 Finish all styling, responsiveness, page layouts
 Finish home page styling
+Styling for recipe full screen page 
 Build contact form api - Email service templates
 Add email function to reset password
 Add images and image cover text to home page 
 Update page selection in main navbar
 Favicon
 Python/Js Testing
-Fix recipes page bug. √
 Add images upload to the app
-Recipe cards styling
 Add author recipes to my recipes page.
 Add create new recipe functions with summernote editor - Page created 
 Add edit and delete functions - Add popup for are you sure about deleting the recipe - Page created
@@ -30,10 +29,10 @@ Add random image generator to the registered users home page
 Add aria labels/semenatic code
 Add code block comments
 Fix bug on recipes page with auth.user.none
-Design Recipe-page page
 Add comments to recipe page page and likes
 
 Maybe:
  
 Add alerts for log in/out/posting/editing
+Add breadcrumb navigation to the application under the header/navbar
 Dark Mode

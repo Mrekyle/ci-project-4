@@ -8,9 +8,9 @@
           <h1 class="card-title text-center pt-2">{{ recipe.title }}</h1>
           <div class="image-container masthead-image">
             {% if 'placeholder' in recipes.featured_image.url %}
-              <img class="card-img" src="https://res.cloudinary.com/dcjikvzf6/image/upload/v1692107043/cld-sample-4.jpg" alt="Recipe Image">
+              <img class="card-img recipe-page-img" src="https://res.cloudinary.com/dcjikvzf6/image/upload/v1692107043/cld-sample-4.jpg" alt="Recipe Image">
             {% else %}
-              <img class="card-img" src="{{ recipe.featured_image }}" alt="Users image of there recipe">
+              <img class="card-img recipe-page-img" src="{{ recipe.featured_image.url }}" alt="Users image of there recipe">
             {% endif %}
             <div class="masthead-text">
               <p>{{ recipe.author }} | {{ recipe.created_on }}</p>
