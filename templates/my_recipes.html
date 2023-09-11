@@ -3,56 +3,77 @@
 {% block content %}
 
 {% if user.is_authenticated %}
+
 <div class="container-fluid header-size">
     <div class="row">
-        <h1 class="header-size">Your Recipes</h1>
-        <p>Here you can find all of your own recipe's that you have created and uploaded to the platform.</p>
-        <p>If you wish to make an edit or delete a recipe please select that button from the cards and follow the next steps</p>
-    </div>
-    <div class="container">
-        <div class="row col-md-4">
-            {% for recipes in recipe_list %}
-                <div class="card">
-                    <div class="card-body">
-                        <a href="{% url 'recipe_page' Recipes.slug %}" aria-label="Opens the recipe in a full screen view" class="card-link">
-                            <div class="image-container masthead-text masthead-image">
-                            {% if 'placeholder' in Recipes.featured_image.url %}
-                                <img class="card-img card-image" src="https://res.cloudinary.com/dcjikvzf6/image/upload/v1692107043/cld-sample-4.jpg" alt="Recipe Image">
-                            {% else %}
-                                <img class="card-img card-image" src="{{ Recipes.featured_image.url }}" alt="Users image of there recipe">
-                            {% endif %}
-                            </div>
-                            <div class="">
-                            <h4 class="card-title text-center pt-1">{{ Recipes.title }}</h4>
-                            </div>
-                        </a>
-                        <hr>
-                        <p class="card-text">{{ recipe.created_on }} | <i class="fa-regular fa-thumbs-up fa-sm">{{ Recipes.likes }} FIX BUG</i></p>
-                        <div class="flex-container mt-2">
-                            <button type="submit">Edit</button>
-                            <button type="submit">Delete</button>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
+        <h1 class="ms-2">Your Recipes</h1>
+        <div class="text-center">
+            <p>Here you can find all of your own recipe's that you have created and uploaded to the platform.<br>
+            If you wish to make an edit or delete a recipe please select that button from the cards and follow the next steps</p>
         </div>
     </div>
-    {% if is_paginated %}
-        <nav aria-label="Page navigation">
-            <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li>
-                <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV</a>
-            </li>
-            {% endif %} 
-            {% if page_obj.has_next %}
-            <li>
-                <a href="?page={{ page_obj.next_page_number }}" class="page-link">NEXT &raquo;</a>
-            </li>
-            {% endif %}
-            </ul>
-        </nav>
-    {% endif %}
+    <div class="container-fluid ms-4">
+        <div class="row">
+            <div class="col-12 mt-1 left">
+                <div class="row">
+                    {% for Recipes in recipes_list %}
+                        {% if user.id == Recipes.author.id %}
+                            <div class="col-md-3">
+                                <div class="card mb-10">
+                                    <div class="card-body">
+                                        <a href="{% url 'recipe_page' Recipes.slug %}" aria-label="Opens the recipe in a full screen view" class="card-link">
+                                            <div class="image-container masthead-text masthead-image">
+                                            {% if 'placeholder' in Recipes.featured_image.url %}
+                                                <img class="card-img card-image" src="https://res.cloudinary.com/dcjikvzf6/image/upload/v1692107043/cld-sample-4.jpg" alt="Recipe Image">
+                                            {% else %}
+                                                <img class="card-img card-image" src="{{ Recipes.featured_image.url }}" alt="Users image of there recipe">
+                                            {% endif %}
+                                            </div>
+                                            <div class="">
+                                            <h4 class="card-title text-center pt-2">{{ Recipes.title }}</h4>
+                                            </div>
+                                        </a>
+                                        <hr>
+                                        <div class="card-text text-center flex-container">
+                                            <button class="ps-2 pe-2 pb-2 pt-2 btn btn-edit"><a href="{% url 'recipe_edit' %}" aria-label="Opens the edit recipe page">Edit</a></button>
+                                            <button class="ps-2 pe-2 pb-2 pt-2 btn btn-delete"><a href="#" onclick="" aria-label="Opens the delete modal for the recipe"></a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="container-fluid">
+                                <div class="row text-center">
+                                    <p>Unfortunately you don't have any posts yet. Click <button class="btn"><a href="#">Here!</a></button> to make your first post</p>
+                                </div>
+                            </div>
+                        {% endif %}
+                        {% if forloop.counter|divisibleby:3 %}
+                            </div>
+                            <div class="row">
+                        {% endif %}
+                    
+                    {% endfor %} 
+                </div>
+            </div>
+        </div>
+        {% if is_paginated %}
+      <nav  aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+          {% if page_obj.has_previous %}
+          <li>
+            <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV</a>
+          </li>
+          {% endif %} 
+          {% if page_obj.has_next %}
+          <li>
+            <a href="?page={{ page_obj.next_page_number }}" class="page-link">NEXT &raquo;</a>
+          </li>
+          {% endif %}
+        </ul>
+      </nav>
+      {% endif %}
+    </div>
 </div>
 {% else %}
     <div class="container header-size text-center">

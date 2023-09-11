@@ -5,7 +5,7 @@
 <div class="container-fluid text-center header-size">
   <div class="row col-md-12">
         <div class="card masthead mt-3 mb-3">
-          <h1 class="card-title text-center pt-2">{{ recipe.title }}</h1>
+          <h1 class="card-title text-center pt-2">{{ recipe.title }} {{ recipe.author.id }}</h1>
           <div class="image-container masthead-image">
             {% if 'placeholder' in recipes.featured_image.url %}
               <img class="card-img recipe-page-img" src="https://res.cloudinary.com/dcjikvzf6/image/upload/v1692107043/cld-sample-4.jpg" alt="Recipe Image">
@@ -26,7 +26,7 @@
           <div class="col-md-6">
             <aside>
               {{ recipe.featured_image | safe }}
-              <i class="fa-regular fa-thumbs-up fa-sm">{{ recipe.likes }}</i>
+              <i class="fa-regular fa-thumbs-up fa-sm">{{ recipe.likes | safe }}</i>
             </aside>
           </div>
           <div class="row">

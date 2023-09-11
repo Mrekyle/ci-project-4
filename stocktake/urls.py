@@ -9,6 +9,6 @@ urlPatterns = [
     path('/recipes/', views.renderRecipe.as_view(), name='recipes'),
     path('/recipes-creation/', views.renderRecipeCreation, name='recipe_creation'),
     path('/recipes-edit/', views.renderRecipeEdit, name='recipe_edit'),
-    path('/my-recipes/', views.renderMyRecipes, name='my_recipes'),
+    path('/my-recipes/', views.renderMyRecipes.as_view(), name='my_recipes'),
     path('<slug:slug>/', views.renderRecipePage.as_view(), name='recipe_page')
 ]

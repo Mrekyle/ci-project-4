@@ -1,10 +1,14 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.models import User
 from django.views import generic, View
-from django.http import HttpResponseRedirect
 from .models import Recipes
 
 # Create your views here.
+
+"""
+Simple return render requests for templates/pages that dont need any 
+other logic for them to be used by the application or user.
+"""
 
 def renderIndex(request):
     return render(request, 'index.html', {})
@@ -20,6 +24,9 @@ def renderPricing(request):
 
 def renderAccount(request):
     return render(request, 'useraccount.html', {})
+
+def renderRecipeEdit(request):
+    return render(request, 'recipe_edit.html', {})
 
 def renderRecipeCreation(request):
     
@@ -37,16 +44,6 @@ def renderRecipeCreation(request):
     
     if request.method == 'GET':
         return render(request, 'recipe_create.html', {})
-
-def renderRecipeEdit(request):
-    return render(request, 'recipe_edit.html', {})
-
-# class renderIndex(generic.ListView):
-
-#     model = Recipes
-#     queryset = Recipes.objects.filter(status=1).order_by('-created_on')
-#     template_name = 'index.html'
-#     paginate_by = 6
 
 class renderRecipe(generic.ListView):
     
@@ -75,18 +72,12 @@ class renderRecipePage(View):
                 'liked': liked,
             },
         )
-    
 
-class renderMyRecipes(View):
+class renderMyRecipes(generic.ListView):
     
-    def get(request):
-        queryset = Recipes.objects.filter(status=1)
-        recipe = get_object_or_404(queryset)
+    model = Recipes
+    queryset = Recipes.objects.filter(status=1).order_by('-created_on')
+    template_name = 'my_recipes.html'
+    paginate_by = 6
 
-        return render(
-            request, 
-            'my_recipes.html', 
-            {
-                'recipe': recipe,
-            },
-        )
+    

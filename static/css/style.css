@@ -74,7 +74,7 @@ html, body {
 }
 
 .card-image {
-    height: 300px;
+    height: 230px;
     width: 100%;
 }
 
@@ -82,3 +82,11 @@ html, body {
     height: 450px;
     width: 400px;
 }   
+
+.btn-edit:hover {
+    background-color: rgb(128, 213, 0);
+}
+
+.btn-delete:hover {
+    background-color: rgb(255, 0, 0);
+}

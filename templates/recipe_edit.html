@@ -6,6 +6,9 @@
     <div class="container-fluid header-size">
         <div class="row">
             <h1 class="header-size">{{ recipe.title }}</h1>
+            {% if user.id == Recipes.author.id %}
+                TABLE HERE 
+            {% endif %}
         </div>
     </div>
 {% else %}
