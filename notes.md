@@ -26,10 +26,10 @@ Python/Js Testing
 Add images upload to the app
 Add create new recipe functions with summernote editor - Page created 
 Add edit and delete functions - Add popup for are you sure about deleting the recipe - Page created
-Add random image generator to the registered users home page
 Add aria labels/semenatic code
 Add code block comments
-Fix bug on recipes page with auth.user.none
+Ensure on users home page that only latest 4 recipes show
+Fix bug on recipes page with auth.user.none - users likes 
 Add comments to recipe page page and likes
 Add back and next buttons to the recipe post page 
 
@@ -38,4 +38,6 @@ Maybe:
 Add alerts for log in/out/posting/editing
 Add breadcrumb navigation to the application under the header/navbar
 Dark Mode
+Add random image generator to the registered users home page
+
 

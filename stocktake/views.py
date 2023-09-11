@@ -10,9 +10,6 @@ Simple return render requests for templates/pages that dont need any
 other logic for them to be used by the application or user.
 """
 
-def renderIndex(request):
-    return render(request, 'index.html', {})
-
 def renderContact(request):
     return render(request, 'contactus.html', {})
 
@@ -27,6 +24,11 @@ def renderAccount(request):
 
 def renderRecipeEdit(request):
     return render(request, 'recipe_edit.html', {})
+
+"""
+Class and function based views that contain more logic
+from the database
+"""
 
 def renderRecipeCreation(request):
     
@@ -44,6 +46,13 @@ def renderRecipeCreation(request):
     
     if request.method == 'GET':
         return render(request, 'recipe_create.html', {})
+
+class renderIndex(generic.ListView):
+    
+    model = Recipes
+    queryset = Recipes.objects.filter(status=1).order_by('-created_on')
+    template_name = 'index.html'
+    paginate_by = 6
 
 class renderRecipe(generic.ListView):
     
@@ -79,5 +88,7 @@ class renderMyRecipes(generic.ListView):
     queryset = Recipes.objects.filter(status=1).order_by('-created_on')
     template_name = 'my_recipes.html'
     paginate_by = 6
+
+
 
     
