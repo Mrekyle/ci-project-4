@@ -2,18 +2,39 @@
 {% block content%}
 
 {% if user.is_authenticated %}
-<div class="container-fluid header-size">
+<div class="container-fluid text-center header-size">
   <div class="row col-md-12">
-        <div class="card mt-3 mb-3">
-          <h1 class="card-title text-center pt-2">{{ Recipes.title }} Hello world </h1>
-          <div class="image-container">
-            {% if 'placeholder' in Recipes.featured_image.url %}
+        <div class="card masthead mt-3 mb-3">
+          <h1 class="card-title text-center pt-2">{{ recipe.title }}</h1>
+          <div class="image-container masthead-image">
+            {% if 'placeholder' in recipes.featured_image.url %}
               <img class="card-img" src="https://res.cloudinary.com/dcjikvzf6/image/upload/v1692107043/cld-sample-4.jpg" alt="Recipe Image">
             {% else %}
-              <img class="card-img" src="{{ Recipes.featured_image.url }}" alt="Users image of there recipe">
+              <img class="card-img" src="{{ recipe.featured_image }}" alt="Users image of there recipe">
             {% endif %}
+            <div class="masthead-text">
+              <p>{{ recipe.author }} | {{ recipe.created_on }}</p>
+            </div>
           </div>
         </div>
+        <div class="row">
+          {{ recipe.recipe_desc | safe }}
+        </div>
+          <div class="col-md-4 ms-5 ps-4">
+            {{ recipe.ingredients_list | safe }}
+          </div>
+          <div class="col-md-6">
+            <aside>
+              {{ recipe.featured_image | safe }}
+              <i class="fa-regular fa-thumbs-up fa-sm">{{ recipe.likes }}</i>
+            </aside>
+          </div>
+          <div class="row">
+            <div class="card">
+            {{ recipe.methods_list | safe }}
+            </div>
+          </div>
+      </div>
   </div>
 </div>
 {% else %}
