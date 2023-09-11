@@ -7,6 +7,9 @@
 <div class="container-fluid header-size">
     <div class="row">
         <h1 class="ms-2">Your Recipes</h1>
+        <div class="create-recipe pe-5 text-end">
+            <p>No recipe's appearing? Click <button type="button" data-mdb-ripple-color="dark" class="btn btn-secondary btn-outline-dark ps-2 pe-2 ms-1 me-1"> <a href="{% url 'recipe_creation' %}" aria-label="Opens the create a recipe page">Here</a> </button>to get started</p>
+        </div>
         <div class="text-center">
             <p>Here you can find all of your own recipe's that you have created and uploaded to the platform.<br>
             If you wish to make an edit or delete a recipe please select that button from the cards and follow the next steps</p>
@@ -36,24 +39,19 @@
                                         <hr>
                                         <div class="card-text text-center flex-container">
                                             <button class="ps-2 pe-2 pb-2 pt-2 btn btn-edit"><a href="{% url 'recipe_edit' %}" aria-label="Opens the edit recipe page">Edit</a></button>
-                                            <button class="ps-2 pe-2 pb-2 pt-2 btn btn-delete"><a href="#" onclick="" aria-label="Opens the delete modal for the recipe"></a></button>
+                                            <button class="ps-2 pe-2 pb-2 pt-2 btn btn-delete ms-3"><a href="#" onclick="" aria-label="Opens the delete modal for the recipe">Delete</a></button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         {% else %}
-                            <div class="container-fluid">
-                                <div class="row text-center">
-                                    <p>Unfortunately you don't have any posts yet. Click <button class="btn"><a href="#">Here!</a></button> to make your first post</p>
-                                </div>
-                            </div>
                         {% endif %}
                         {% if forloop.counter|divisibleby:3 %}
                             </div>
                             <div class="row">
                         {% endif %}
                     
-                    {% endfor %} 
+                    {% endfor %}
                 </div>
             </div>
         </div>

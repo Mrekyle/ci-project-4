@@ -3,9 +3,9 @@
 
 {% if user.is_authenticated %}
 <div class="container-fluid text-center header-size">
-  <div class="row col-md-12">
-        <div class="card masthead mt-3 mb-3">
-          <h1 class="card-title text-center pt-2">{{ recipe.title }} {{ recipe.author.id }}</h1>
+  <div class="row d-flex justify-content-center">
+        <div style="width: 80%;" class="card masthead mt-3 mb-3">
+          <h1 class="card-title text-center pt-2">{{ recipe.title }}</h1>
           <div class="image-container masthead-image">
             {% if 'placeholder' in recipes.featured_image.url %}
               <img class="card-img recipe-page-img" src="https://res.cloudinary.com/dcjikvzf6/image/upload/v1692107043/cld-sample-4.jpg" alt="Recipe Image">
@@ -17,9 +17,6 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          {{ recipe.recipe_desc | safe }}
-        </div>
           <div class="col-md-4 ms-5 ps-4">
             {{ recipe.ingredients_list | safe }}
           </div>
@@ -30,7 +27,7 @@
             </aside>
           </div>
           <div class="row">
-            <div class="card">
+            <div class="card mb-8">
             {{ recipe.methods_list | safe }}
             </div>
           </div>

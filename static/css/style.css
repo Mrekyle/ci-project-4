@@ -84,9 +84,30 @@ html, body {
 }   
 
 .btn-edit:hover {
-    background-color: rgb(128, 213, 0);
+    background-color: rgb(0, 255, 0);
+    text-decoration: none;
 }
 
 .btn-delete:hover {
     background-color: rgb(255, 0, 0);
+    text-decoration: none;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.create-recipe {
+    margin-top: -3.4rem;
+    margin-right: 3rem;
+}
+
+.btn > a {
+    text-decoration: none;
+    color: black;
+}
+
+.card-body > a {
+    text-decoration: none;
+    color: black;
 }
