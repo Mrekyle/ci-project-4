@@ -7,20 +7,19 @@
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for Recipes in recipes_list %}
-                  <div class="masthead">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <div class="card-title">
                                   <a href="{% url 'recipe_page' Recipes.slug %}" aria-label="Opens the recipe in a full screen view" class="card-link">
                                     <div class="image-container masthead-text masthead-image">
                                       {% if 'placeholder' in Recipes.featured_image.url %}
-                                        <img class="card-img-top" src="https://res.cloudinary.com/dcjikvzf6/image/upload/v1692107043/cld-sample-4.jpg" alt="Recipe Image">
-                                        <p class="recipe-title text-center">{{ Recipes.title }}</p>
+                                        <img class="card-img" src="https://res.cloudinary.com/dcjikvzf6/image/upload/v1692107043/cld-sample-4.jpg" alt="Recipe Image">
                                       {% else %}
-                                        <img class="card-img-top" src="{{ Recipes.featured_image }}" alt="Users image of there recipe">
-                                        <p class="recipe-title text-center">{{ Recipes.title }}</p>
+                                        <img class="card-img" src="{{ Recipes.featured_image.url }}" alt="Users image of there recipe">
                                       {% endif %}
+                                    </div>
+                                    <div class="">
+                                      <h4 class="card-title text-center pt-1">{{ Recipes.title }}</h4>
                                     </div>
                                   </a>
                                      <div class="text-muted text-center recipe-subtitle">
@@ -30,14 +29,12 @@
                                       <hr>
                                         <p class="card-text text-muted">Author: {{ Recipes.author }} |  {{ Recipes.created_on }}</p>
                                         {% with Comments.all.count as comments_count %}
-                                          <p><i class="fa-regular fa-comments fa-lg">{{ comments_count }}</i> | <i class="fa-regular fa-thumbs-up fa-lg">{{ Recipes.likes }} FIX BUG</i></p>
+                                          <p><i class="fa-regular fa-comments fa-sm">{{ comments_count }}</i> | <i class="fa-regular fa-thumbs-up fa-sm">{{ Recipes.likes }} FIX BUG</i></p>
                                         {% endwith %}
                                     </div>
-                                </div>
-                            </div>
+                              </div>
                         </div>
                     </div>
-                  </div>
                 {% if forloop.counter|divisibleby:3 %}
             </div>
             <div class="row">

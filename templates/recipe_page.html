@@ -3,66 +3,18 @@
 
 {% if user.is_authenticated %}
 <div class="container-fluid header-size">
-    <div class="row">
-        <div class="col-12 mt-3 left">
-            <div class="row">
-                {% for Recipes in recipes_list %}
-                  <div class="masthead">
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <div class="card-title">
-                                  <a href="{% url 'recipe_page' Recipes.slug %}" aria-label="Opens the recipe in a full screen view" class="card-link">
-                                    <div class="image-container masthead-text masthead-image">
-                                      {% if 'placeholder' in Recipes.featured_image.url %}
-                                        <img class="card-img-top" src="https://res.cloudinary.com/dcjikvzf6/image/upload/v1692107043/cld-sample-4.jpg" alt="Recipe Image">
-                                        <p class="recipe-title text-center">{{ Recipes.title }}</p>
-                                      {% else %}
-                                        <img class="card-img-top" src="{{ Recipes.featured_image }}" alt="Users image of there recipe">
-                                        <p class="recipe-title text-center">{{ Recipes.title }}</p>
-                                      {% endif %}
-                                    </div>
-                                  </a>
-                                     <div class="text-muted text-center recipe-subtitle">
-                                        {{ Recipes.recipe_desc | safe }}
-                                    </div>
-                                    <div class="">
-                                      <hr>
-                                        <p class="card-text text-muted">Author: {{ Recipes.author }} |  {{ Recipes.created_on }}</p>
-                                        {% with Comments.all.count as comments_count %}
-                                          <p><i class="fa-regular fa-comments fa-lg">{{ comments_count }}</i> | <i class="fa-regular fa-thumbs-up fa-lg">{{ Recipes.likes }} FIX BUG</i></p>
-                                        {% endwith %}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                {% if forloop.counter|divisibleby:3 %}
-            </div>
-            <div class="row">
-                {% endif %}
-                
-                {% endfor %} 
-            </div>
+  <div class="row col-md-12">
+        <div class="card mt-3 mb-3">
+          <h1 class="card-title text-center pt-2">{{ Recipes.title }} Hello world </h1>
+          <div class="image-container">
+            {% if 'placeholder' in Recipes.featured_image.url %}
+              <img class="card-img" src="https://res.cloudinary.com/dcjikvzf6/image/upload/v1692107043/cld-sample-4.jpg" alt="Recipe Image">
+            {% else %}
+              <img class="card-img" src="{{ Recipes.featured_image.url }}" alt="Users image of there recipe">
+            {% endif %}
+          </div>
         </div>
-    </div>
-    {% if is_paginated %}
-  <nav aria-label="Page navigation">
-    <ul class="pagination justify-content-center">
-      {% if page_obj.has_previous %}
-      <li>
-        <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV</a>
-      </li>
-      {% endif %} 
-      {% if page_obj.has_next %}
-      <li>
-        <a href="?page={{ page_obj.next_page_number }}" class="page-link">NEXT &raquo;</a>
-      </li>
-      {% endif %}
-    </ul>
-  </nav>
-  {% endif %}
+  </div>
 </div>
 {% else %}
   <div class="container header-size text-center">

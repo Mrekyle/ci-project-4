@@ -1,4 +1,8 @@
 from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from django.views import generic, View
+from django.http import HttpResponseRedirect
+from .models import Recipes
 
 # Create your views here.
 
@@ -25,11 +29,6 @@ def renderRecipeEdit(request):
 
 def renderMyRecipes(request):
     return render(request, 'my_recipes.html', {})
-
-from django.shortcuts import render, get_object_or_404
-from django.views import generic, View
-from django.http import HttpResponseRedirect
-from .models import Recipes
 
 class renderRecipe(generic.ListView):
     

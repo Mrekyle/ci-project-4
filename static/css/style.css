@@ -54,3 +54,21 @@ html, body {
 .recipe-subtitle {
     padding-top: 0.3rem;
 }
+
+.container-main {
+    height: 12rem;
+}
+
+.user-main {
+    margin-top: -1.3rem;
+    margin-right: 1rem;
+}
+
+.navbar-main {
+    margin-right: -9.1rem;
+}
+
+.main-title {
+    font-size: 1.9rem;
+    margin-left: 2rem;
+}

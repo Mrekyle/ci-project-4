@@ -15,14 +15,11 @@
         {% if user.is_authenticated %}
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}">code|myRecipe</a>
+            <a class="navbar-brand main-title" href="{% url 'home' %}">|myRecipe</a>
             <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
-            <div>
-                <p>Welcome <strong>{{ user.username }}</strong></p>
-            </div>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse pt-4 navbar-main" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
@@ -37,9 +34,12 @@
                     <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                    <a class="nav-link" href="{% url 'account_logout' %}"><i class="fa-regular fa-user fa-lg"></i> Logout</a>
                 </li>
                 </ul>
+            </div>
+            <div class="user-main">
+                <p>Welcome <strong>{{ user.username }}</strong></p>
             </div>
             </div>
         </nav>
@@ -103,6 +103,7 @@
             </div>
           </div>
         </div>
+    </div>
     {% endif %}
         <div class="f-bg text-center p-2">
             &copy  <script>document.write(new Date().getFullYear())</script> myRecipe |  Kyle Chart |  <a target="_blank" aria-label="Opens up Kyle Charts github" href="https://www.github.com/mrekyle"><i class="fa-brands fa-github git-link"></i></a>
