@@ -3,12 +3,15 @@
 
 {% if user.is_authenticated %}
 <div class="container-fluid header-size ms-4">
+  <div class="page-title">
+    <h1>Our Recipes</h1>
+  </div>
     <div class="row">
         <div class="col-12 mt-3 left">
-            <div class="row">
+            <div class="row d-flex justify-content-center">
                 {% for Recipes in recipes_list %}
                     <div class="col-md-3">
-                        <div class="card mb-4">
+                      <div class="card mb-4">
                             <div class="card-body">
                                   <a href="{% url 'recipe_page' Recipes.slug %}" aria-label="Opens the recipe in a full screen view" class="card-link">
                                     <div class="image-container masthead-text masthead-image">
@@ -33,11 +36,11 @@
                                         {% endwith %}
                                     </div>
                               </div>
-                        </div>
+                      </div>
                     </div>
                 {% if forloop.counter|divisibleby:3 %}
             </div>
-            <div class="row">
+          <div class="row d-flex justify-content-center">
                 {% endif %}
                 
                 {% endfor %} 

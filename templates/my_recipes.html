@@ -10,12 +10,12 @@
         <div class="create-recipe pe-5 text-end">
             <p>No recipe's appearing? Click <button type="button" data-mdb-ripple-color="dark" class="btn btn-secondary btn-outline-dark ps-2 pe-2 ms-1 me-1"> <a href="{% url 'recipe_creation' %}" aria-label="Opens the create a recipe page">Here</a> </button>to get started</p>
         </div>
-        <div class="text-center">
+        <div class="text-center mb-3 mt-3">
             <p>Here you can find all of your own recipe's that you have created and uploaded to the platform.<br>
             If you wish to make an edit or delete a recipe please select that button from the cards and follow the next steps</p>
         </div>
     </div>
-    <div class="container-fluid ms-4">
+    <div class="container-fluid ms-4 mt-5">
         <div class="row">
             <div class="col-12 mt-1 left">
                 <div class="row">
@@ -38,8 +38,8 @@
                                         </a>
                                         <hr>
                                         <div class="card-text text-center flex-container">
-                                            <button class="ps-2 pe-2 pb-2 pt-2 btn btn-edit"><a href="{% url 'recipe_edit' %}" aria-label="Opens the edit recipe page">Edit</a></button>
-                                            <button class="ps-2 pe-2 pb-2 pt-2 btn btn-delete ms-3"><a href="#" onclick="" aria-label="Opens the delete modal for the recipe">Delete</a></button>
+                                            <button class="ps-2 pe-2 pb-2 pt-2 btn btn-edit" type="button"><a href="{% url 'recipe_edit' %}" aria-label="Opens the edit recipe page">Edit</a></button>
+                                            <button class="ps-2 pe-2 pb-2 pt-2 btn btn-delete ms-3" type="button" data-mdb-toggle="modal" data-mdb-target="#staticBackdrop"><a href="#" aria-label="Opens the delete modal for the recipe">Delete</a></button>
                                         </div>
                                     </div>
                                 </div>
@@ -73,6 +73,20 @@
       {% endif %}
     </div>
 </div>
+  <div class="modal fade" id="staticBackdrop" data-mdb-backdrop="static" data-mdb-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Please Confirm Deletion</h5>
+          <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">Are you sure you want to permanently delete this recipe?<br>This is irreversible.</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-delete me-6">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
 {% else %}
     <div class="container header-size text-center">
         <h3>Unfortunately we do not know you! But we'd love to get to know you. So please join us on our adventure.</h3>

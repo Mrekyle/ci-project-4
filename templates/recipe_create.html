@@ -7,38 +7,22 @@
         <div class="row">
             <h1 class="">Create a new recipe to add to our ever growing database.</h1>
         </div>
-        <form method="POST" action="add">
-            {% csrf_token %}
-                <div>
-                    <label for="recipe-title">Recipe Title: </label>
-                    <input id="recipe-title" name="title" type="text" placeholder="Recipe Title: Creamy Carbonara"/>
-                </div>
-                <div>
-                    <label for="recipe-description">Recipe Description: </label>
-                    <input id="recipe-description" name="recipe_desc" type="text" placeholder="Please provide a brief description about your recipe here" />
-                </div>
-                <div>
-                    <label for="recipe-story">Recipe Story: </label>
-                    <p>If you have a story about your recipe that you wish to share with our users. Please enter it here</p>
-                    <textarea id="recipe-story" name="recipe_story" type="text" placeholder="Please add your story about your recipe here"></textarea>
-                </div>
-                <div>
-                    <label for="recipe-ingredients">Ingredients: </label>
-                    <textarea id="recipe-ingredients" name="ingredients_list" placeholder="Please enter your recipe's ingredients here"></textarea>
-                </div>
-                <div>
-                    <label for="recipe-method">Recipe Method: </label>
-                    <textarea id="recipe-method" name="method_list" placeholder="Please enter your recipe's methods here"></textarea>
-                </div>
-                <div>
-                    <label for="img-upload">Image Upload: </label>
-                    <input id="img-upload" name="image-upload" type="file">
-                </div>
-                <div>
-                    <button type="submit">Create Your Recipe!</button>
-                </div>
-        </form>
+
+            <form method="POST" action="">
+                {% csrf_token %}
+                {{ form.as_p }}
+                    
+                    <div>
+                        <button type="submit" class="btn btn-primary btn-block mb-4">Create your recipe</button>
+                    </div>
+            </form>
+        </div>
     </div>
+    <script>
+        let userId = '{{ user.id }}';
+        document.getElementById('author_id').value = userId
+    </script>
+    
 {% else %}
     <div class="container header-size text-center">
         <h3>Unfortunately we do not know you! But we'd love to get to know you. So please join us on our adventure.</h3>

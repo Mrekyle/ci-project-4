@@ -1,3 +1,4 @@
+
 Pre Deployment:
 
 Set debug to false
@@ -13,9 +14,7 @@ Enable auto Deploys
 TO DO:
 
 Finish all styling, responsiveness, page layouts
-Finish home page styling
 Styling for recipe full screen page 
-Add latest 3 recipe cards to index page
 Style recipe creation form - Add crispy forms? Add summernote editor to the recipe creation
 Build contact form api - Email service templates
 Add email function to reset password
@@ -32,6 +31,7 @@ Ensure on users home page that only latest 4 recipes show
 Fix bug on recipes page with auth.user.none - users likes 
 Add comments to recipe page page and likes
 Add back and next buttons to the recipe post page 
+Add search to recipes page 
 
 Maybe:
  
@@ -39,5 +39,6 @@ Add alerts for log in/out/posting/editing
 Add breadcrumb navigation to the application under the header/navbar
 Dark Mode
 Add random image generator to the registered users home page
+else statment for recipes page to add create recipe button 
 
 
