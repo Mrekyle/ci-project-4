@@ -30,30 +30,11 @@ Class based views that contain more logic that is
 required from the database.
 """
 
-# def renderRecipeCreation(request):
-    
-#     if request.method == 'POST':
-#             title = request.POST.get('title')
-#             recipe_desc = request.POST.get('recipe_desc')
-#             recipe_story = request.POST.get('recipe_story')
-#             ingredients_list = request.POST.get('ingredients_list')
-#             methods_list = request.POST.get('method_list')
-#             author_id = request.POST.get('user.id')
-#             # img_upload = request.POST.get('image-upload')
-
-#             Recipes.objects.create(title=title, recipe_desc=recipe_desc, recipe_story=recipe_story, ingredients_list=ingredients_list, methods_list=methods_list, author_id=author_id)
-            
-#             return redirect('recipe.html')
-    
-#     if request.method == 'GET':
-#         return render(request, 'recipe_create.html', {})
-
 class renderRecipeCreation(generic.CreateView):
 
     model = Recipes
     form_class = createRecipe
     template_name = 'recipe_create.html'
-    # fields = ('title', 'recipe_desc', 'slug', 'author', 'recipe_story', 'ingredients_list', 'methods_list', 'featured_image')
 
 
 class renderIndex(generic.ListView):
