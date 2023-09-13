@@ -31,6 +31,7 @@ Add comments to recipe page page and likes
 Add back and next buttons to the recipe post page 
 Add search to recipes page 
 Remove slug and use recipe id for page - Youtube video 
+Add active to navbar pages
 
 Maybe:
  

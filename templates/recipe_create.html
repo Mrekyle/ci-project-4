@@ -3,9 +3,12 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-    <div class="container-fluid header-size">
+    <div class="container-fluid header-size recipe-container">
         <div class="row">
-            <h1 class="">Create a new recipe to add to our ever growing database.</h1>
+            <h2 class="text-center pt-4">Create a new recipe to add to our ever growing database.</h2>
+            <p class="text-center mb-4">Create a new recipe by filling out all the information required below. <br>
+                If you have a photo of your dish you'd like to share, we'd love to have it. <br>
+                (if not, our default will be provided for you.)</p>
         </div>
 
             <form method="POST" action="">

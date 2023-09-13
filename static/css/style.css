@@ -115,3 +115,7 @@ html, body {
 .container-block {
     height: 8rem;
 }
+
+.recipe-container {
+    width: 60%;
+}
