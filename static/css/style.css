@@ -111,3 +111,7 @@ html, body {
     text-decoration: none;
     color: black;
 }
+
+.container-block {
+    height: 8rem;
+}

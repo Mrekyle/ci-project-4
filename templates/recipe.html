@@ -4,9 +4,9 @@
 {% if user.is_authenticated %}
 <div class="container-fluid header-size ms-4">
   <div class="page-title">
-    <h1>Our Recipes</h1>
+    <h1 class="pt-3">Our Recipes</h1>
   </div>
-    <div class="row">
+    <div class="row mt-4 mb-6">
         <div class="col-12 mt-3 left">
             <div class="row d-flex justify-content-center">
                 {% for Recipes in recipes_list %}

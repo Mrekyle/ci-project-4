@@ -1,7 +1,8 @@
+
 function sendMail (contactForm) {
-    emailjs.send("service_6tepuq5","template_89y5wtg", {
+    emailjs.send("service_g7iucrk","template_89y5wtg", {
         'from_name': contactForm.name.value, 
-        'contact_email': contactForm.email.value, 
+        'contact_email': contactForm.contact_email.value, 
         'message': contactForm.message.value,
     })
     .then (
@@ -13,3 +14,12 @@ function sendMail (contactForm) {
         });
     return false;
 }
+
+let emailSuccess = document.getElementById('email-success');
+let resetForm = document.getElementById('contactForm');
+
+resetForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    resetForm.reset();
+    emailSuccess.innerHTML += 'Email submitted successfully! <br> We will reply as soon as we can.';
+});

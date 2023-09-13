@@ -2,42 +2,36 @@
 {% load static %}
 
 {% block content %}
-
-<script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-        (function(){
-            emailjs.init("_LzmMaNXFCJQpzF9b"); 
-        })();
-    </script>
-
 <div class="header-size text-center">
-    <h2>Contact Us.</h2>
+    <h2 class="pt-4">Contact Us.</h2>
 </div>
     <div class="container contact-form">
-        <form id="contactForm" onsubmit="return sendmail(this);">
+        <form id="contactForm" onsubmit="return sendMail(this);">
             <!-- Name input -->
-            <div class="form-outline mb-4">
-            <input type="text" id="form4Example1" class="form-control" />
-            <label name="name" class="form-label" for="form4Example1">Name</label>
+            <div class="form-outline mb-2">
+            <input name="name" type="text" id="form4Example1" class="form-control" required/>
+            <label class="form-label" for="form4Example1">Name*</label>
             </div>
         
             <!-- Email input -->
-            <div class="form-outline mb-4">
-            <input type="email" id="form4Example2" class="form-control" />
-            <label name="contact_email" class="form-label" for="form4Example2">Email address</label>
+            <div class="form-outline mb-2">
+            <input name="contact_email" type="email" id="form4Example2" class="form-control" required/>
+            <label class="form-label" for="form4Example2">Email address*</label>
             </div>
         
             <!-- Message input -->
-            <div class="form-outline mb-4">
-            <textarea class="form-control" id="form4Example3" rows="4"></textarea>
-            <label name="message" class="form-label" for="form4Example3">Message</label>
+            <div class="form-outline mb-2">
+            <textarea name="message"  class="form-control" id="form4Example3" rows="4" required></textarea>
+            <label class="form-label" for="form4Example3">Message*</label>
             </div>
         
             <!-- Submit button -->
-            <button type="submit" class="btn btn-primary btn-block mb-4">Send your message!</button>
+            <button type="submit" class="btn btn-primary btn-block mb-1 pt-2">Send your message!</button>
+            <p class="text-muted text-center pt-2">* means the information is required</p>
         </form>
+        <div class="row">
+            <p id="email-success" class="text-center text-success text-opacity-75"></p>
+        </div>
     </div>
 </div>
 {% endblock %}

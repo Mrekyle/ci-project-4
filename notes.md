@@ -16,7 +16,6 @@ TO DO:
 Finish all styling, responsiveness, page layouts
 Styling for recipe full screen page 
 Style recipe creation form - Add crispy forms? Add summernote editor to the recipe creation
-Build contact form api - Email service templates
 Add email function to reset password
 Add images and image cover text to home page 
 Update page selection in main navbar
@@ -27,11 +26,11 @@ Add create new recipe functions with summernote editor - Page created
 Add edit and delete functions - Add popup for are you sure about deleting the recipe - Page created
 Add aria labels/semenatic code
 Add code block comments
-Ensure on users home page that only latest 4 recipes show
 Fix bug on recipes page with auth.user.none - users likes 
 Add comments to recipe page page and likes
 Add back and next buttons to the recipe post page 
 Add search to recipes page 
+Remove slug and use recipe id for page - Youtube video 
 
 Maybe:
  
