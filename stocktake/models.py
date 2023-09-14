@@ -11,6 +11,10 @@ from django.shortcuts import redirect
 STATUS = ((0, 'Draft'), (1, 'Published'))
 
 class Recipes(models.Model):
+    """
+    The main recipe model to build the database. Which is then split
+    out to each page that renders the recipe.
+    """
     title = models.CharField(max_length=30)
     slug = models.SlugField(max_length=30, unique=True, null=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='recipe_post')
@@ -35,6 +39,9 @@ class Recipes(models.Model):
 
 
 class Comment(models.Model):
+    """
+    Model for the comments on the recipe
+    """
     recipe = models.ForeignKey(Recipes, on_delete=models.CASCADE, related_name='comments')
     name = models.CharField(max_length=20)
     email = models.EmailField()

@@ -11,6 +11,7 @@
                 (if not, our default will be provided for you.)</p>
         </div>
 
+        <div id="contactForm">
             <form method="POST" action="">
                 {% csrf_token %}
                 {{ form.as_p }}
@@ -19,6 +20,7 @@
                         <button type="submit" class="btn btn-primary btn-block mb-4">Create your recipe</button>
                     </div>
             </form>
+        </div>
         </div>
     </div>
     <script>

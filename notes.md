@@ -15,11 +15,9 @@ TO DO:
 
 Finish all styling, responsiveness, page layouts
 Styling for recipe full screen page 
-Style recipe creation form - Add crispy forms? Add summernote editor to the recipe creation
+Style recipe creation form - Add summernote editor to the recipe creation
 Add email function to reset password
 Add images and image cover text to home page 
-Update page selection in main navbar
-Favicon
 Python/Js Testing
 Add images upload to the app
 Add create new recipe functions with summernote editor - Page created 
@@ -27,14 +25,15 @@ Add edit and delete functions - Add popup for are you sure about deleting the re
 Add aria labels/semenatic code
 Add code block comments
 Fix bug on recipes page with auth.user.none - users likes 
-Add comments to recipe page page and likes
-Add back and next buttons to the recipe post page 
+Add comments to recipe page page and likes 
 Add search to recipes page 
 Remove slug and use recipe id for page - Youtube video 
-Add active to navbar pages
+
+On user page, Add in place to set first and last name. change password and email. - Change all instances of author to first and last name of the user. but leave user logged in as user.
 
 Maybe:
  
+Update page selection in main navbar
 Add alerts for log in/out/posting/editing
 Add breadcrumb navigation to the application under the header/navbar
 Dark Mode
