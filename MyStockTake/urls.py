@@ -1,18 +1,3 @@
-"""MyStockTake URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/3.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
 from django.urls import path, include
 
@@ -35,10 +20,10 @@ urlpatterns = [
     path('pricing/', renderPricing, name='pricing'),
     path('contactus/', renderContact, name='contact'),
     path('user-account/', renderAccount, name='account'),
-    path('recipes/', renderRecipe.as_view(), name='recipes'),
+    path('all-recipes/', renderRecipe.as_view(), name='all_recipes'),
     path('recipes-creation/', renderRecipeCreation.as_view(), name='recipe_creation'),
     path('recipes-edit/', renderRecipeEdit, name='recipe_edit'),
     path('my-recipes/', renderMyRecipes.as_view(), name='my_recipes'),
-    path('<slug:slug>/', renderRecipePage.as_view(), name='recipe_page'),
+    path('recipes/<int:pk>/', renderRecipePage.as_view(), name='recipe_page'),
     path('accounts/', include('allauth.urls'), name='accounts_urls'),
 ]

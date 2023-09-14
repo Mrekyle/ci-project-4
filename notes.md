@@ -27,7 +27,8 @@ Add code block comments
 Fix bug on recipes page with auth.user.none - users likes 
 Add comments to recipe page page and likes 
 Add search to recipes page 
-Remove slug and use recipe id for page - Youtube video 
+Fix bug of no reverse match on home page
+Fix recipes creation not submitting 
 
 On user page, Add in place to set first and last name. change password and email. - Change all instances of author to first and last name of the user. but leave user logged in as user.
 

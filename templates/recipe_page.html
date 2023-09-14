@@ -4,6 +4,7 @@
 {% if user.is_authenticated %}
 <div class="container-fluid text-center header-size">
   <div class="row d-flex justify-content-center">
+    <!-- Recipe card -->
         <div style="width: 80%;" class="card masthead mt-3 mb-3">
           <h1 class="card-title text-center pt-2">{{ recipe.title }}</h1>
           <div class="image-container masthead-image">
@@ -13,22 +14,22 @@
               <img class="card-img recipe-page-img" src="{{ recipe.featured_image.url }}" alt="Users image of there recipe">
             {% endif %}
             <div class="masthead-text">
-              <p>{{ recipe.author }} | {{ recipe.created_on }}</p>
+              <p>{{ recipes.author }} | {{ recipes.created_on }}</p>
             </div>
           </div>
         </div>
           <div class="col-md-4 ms-5 ps-4">
-            {{ recipe.ingredients_list | safe }}
+            {{ recipes.ingredients_list | safe }}
           </div>
           <div class="col-md-6">
             <aside>
-              {{ recipe.featured_image.url | safe }}
-              <i class="fa-regular fa-thumbs-up fa-sm">{{ recipe.likes | safe }}</i>
+              {{ recipes.featured_image.url | safe }}
+              <i class="fa-regular fa-thumbs-up fa-sm">{{ recipes.likes | safe }}</i>
             </aside>
           </div>
           <div class="row">
             <div class="card mb-3">
-            {{ recipe.methods_list | safe }}
+            {{ recipes.methods_list | safe }}
             </div>
           </div>
       </div>
@@ -36,7 +37,7 @@
 </div>
 <div class="container mb-6 d-flex justify-content-center">
   <div class="row">
-    <button style="width: 6rem; font-size: 1.2rem;" class="btn btn-secondary ps-2 pe-2 pt-2 pb-2"><a href="{% url 'home' %}" aria-label="Goes back to the previous page"><i class="fa-solid fa-arrow-left"></i> BACK</a></button>
+    <button style="width: 6rem; font-size: 1.2rem;" class="btn btn-secondary ps-2 pe-2 pt-2 pb-2"><a href="{% url 'all_recipes' %}" aria-label="Goes back to the previous page"><i class="fa-solid fa-arrow-left"></i> BACK</a></button>
   </div>
 </div>
 {% else %}
