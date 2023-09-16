@@ -6,14 +6,28 @@
 
 {% if user.is_authenticated %}
 <div class="container header-size text-center">
-    <div class="row mb-12">
+    <div class="row mb-6">
         <h2 class="mt-4">Welcome {{ user.username }}</h2>
-        <p class="pt-2">Here you can edit some information for your account. Such as resetting your password.</p>
-        <ul class="pt-3" style="list-style: none;">
-            <li><a href="{% url 'account_change_password' %}">Change your Password</a></li>
-        </ul>
+        <p class="pt-2">Welcome to the accounts page. Here you can add and edit your account information.<br> Fill out the forms below to tell us more about yourself</p>
     </div>
-    <div class="container-block"></div>
+    <div class="container-fluid">
+        <div class="d-flex mb-6">
+            <div class="col-md-4">
+                <h4>Change name</h4>
+                <p>Your current name is:<br><strong>{{ user.first_name}} {{ user.last_name }}</strong></p>
+                <p>Update it below.</p>
+                <form>
+                    {% csrf_token%}
+                </form>
+            </div>
+            <div class="col-md-4">
+                <h4>Change Password</h4>
+            </div>
+            <div class="col-md-4">
+                <h4>Change Email</h4>
+            </div>
+        </div>
+    </div>
 </div>
 {% else %}
 <div class="container header-size text-center">

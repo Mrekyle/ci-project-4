@@ -21,14 +21,13 @@ Add images and image cover text to home page
 Python/Js Testing
 Add images upload to the app
 Add create new recipe functions with summernote editor - Page created 
-Add edit and delete functions - Add popup for are you sure about deleting the recipe - Page created
+Add edit funciton
+Style recipe deletion page
 Add aria labels/semenatic code
 Add code block comments
 Fix bug on recipes page with auth.user.none - users likes 
 Add comments to recipe page page and likes 
 Add search to recipes page 
-Fix bug of no reverse match on home page
-Fix recipes creation not submitting 
 
 On user page, Add in place to set first and last name. change password and email. - Change all instances of author to first and last name of the user. but leave user logged in as user.
 
