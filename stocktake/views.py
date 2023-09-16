@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from .models import Recipes
 from .forms import createRecipe
+from django.urls import reverse_lazy
 
 # Create your views here.
 
@@ -21,9 +22,6 @@ def renderPricing(request):
 
 def renderAccount(request):
     return render(request, 'useraccount.html', {})
-
-def renderRecipeEdit(request):
-    return render(request, 'recipe_edit.html', {})
 
 """
 Class based views that contain more logic that is 
@@ -62,6 +60,18 @@ class renderMyRecipes(generic.ListView):
     queryset = Recipes.objects.filter(status=1).order_by('-created_on')
     template_name = 'my_recipes.html'
     paginate_by = 9 
+
+
+class renderRecipeEdit(generic.DetailView):
+
+    model = Recipes
+    template_name = 'recipe_edit.html'
+
+class renderRecipeDelete(generic.DeleteView):
+
+    model = Recipes
+    template_name = 'recipe_delete.html'
+    success_url = reverse_lazy('my_recipes')
 
 
 

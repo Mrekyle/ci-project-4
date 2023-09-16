@@ -7,11 +7,16 @@
         <div class="row">
             <h1 class="header-size">{{ recipe.title }}</h1>
             {% if user.id == Recipes.author.id %}
-                TABLE HERE 
+                {% Recipes.methods_list %}
             {% endif %}
             <h2>Hello world</h2>
         </div>
+        <div class="row">
+            <button type="submit" id="save-btn" class="btn btn-delete me-6">Save & Submit</button>
+            <button type="submit" id="delete-btn" class="btn btn-delete me-6">Delete</button>
+        </div>
     </div>
+
 {% else %}
     <div class="container header-size text-center">
         <h3>Unfortunately we do not know you! But we'd love to get to know you. So please join us on our adventure.</h3>

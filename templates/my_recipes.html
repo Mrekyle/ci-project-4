@@ -39,7 +39,7 @@
                                         <hr>
                                         <div class="card-text text-center flex-container">
                                             <button class="ps-2 pe-2 pb-2 pt-2 btn btn-edit" type="button"><a href="{% url 'recipe_edit' %}" aria-label="Opens the edit recipe page">Edit</a></button>
-                                            <button class="ps-2 pe-2 pb-2 pt-2 btn btn-delete ms-3" type="button" data-mdb-toggle="modal" data-mdb-target="#staticBackdrop"><a href="#" aria-label="Opens the delete modal for the recipe">Delete</a></button>
+                                            <button class='ps-2 pe-2 pb-2 pt=2 btn btn-delete' type="button"><a href="{% url 'delete_recipe' Recipes.pk %}" aria-label="Opens the delete recipe page">Delete</a></button>
                                         </div>
                                     </div>
                                 </div>
@@ -73,20 +73,7 @@
       {% endif %}
     </div>
 </div>
-  <div class="modal fade" id="staticBackdrop" data-mdb-backdrop="static" data-mdb-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Please Confirm Deletion</h5>
-          <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body text-center">Are you sure you want to permanently delete this recipe?<br>This is irreversible.</div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-delete me-6">Delete</button>
-        </div>
-      </div>
-    </div>
-  </div>
+
 {% else %}
     <div class="container header-size text-center">
         <h3>Unfortunately we do not know you! But we'd love to get to know you. So please join us on our adventure.</h3>

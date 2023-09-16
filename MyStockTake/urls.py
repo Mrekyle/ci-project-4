@@ -11,6 +11,7 @@ from stocktake.views import (
     renderRecipeCreation,
     renderMyRecipes,
     renderRecipeEdit,
+    renderRecipeDelete,
 )
 
 urlpatterns = [
@@ -21,9 +22,10 @@ urlpatterns = [
     path('contactus/', renderContact, name='contact'),
     path('user-account/', renderAccount, name='account'),
     path('all-recipes/', renderRecipe.as_view(), name='all_recipes'),
+    path('recipes/<int:pk>/', renderRecipePage.as_view(), name='recipe_page'),
+    path('my-recipes/', renderMyRecipes.as_view(), name='my_recipes'),
     path('recipes-creation/', renderRecipeCreation.as_view(), name='recipe_creation'),
     path('recipes-edit/', renderRecipeEdit, name='recipe_edit'),
-    path('my-recipes/', renderMyRecipes.as_view(), name='my_recipes'),
-    path('recipes/<int:pk>/', renderRecipePage.as_view(), name='recipe_page'),
+    path('my-recipes/<int:pk>/delete', renderRecipeDelete.as_view(), name='delete_recipe'),
     path('accounts/', include('allauth.urls'), name='accounts_urls'),
 ]
