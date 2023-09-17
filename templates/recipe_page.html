@@ -14,7 +14,7 @@
               <img class="card-img recipe-page-img" src="{{ recipe.featured_image.url }}" alt="Users image of there recipe">
             {% endif %}
             <div class="masthead-text">
-              <p>{{ recipes.author }} | {{ recipes.created_on }}</p>
+              <p>{{ recipes.author.first_name }} {{ recipes.author.last_name}} | {{ recipes.created_on }}</p>
             </div>
           </div>
         </div>

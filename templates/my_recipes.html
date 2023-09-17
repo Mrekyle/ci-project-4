@@ -11,6 +11,7 @@
             <p>No recipe's appearing? Click <button type="button" data-mdb-ripple-color="dark" class="btn btn-secondary btn-outline-dark ps-2 pe-2 ms-1 me-1"> <a href="{% url 'recipe_creation' %}" aria-label="Opens the create a recipe page">Here</a> </button>to get started</p>
         </div>
         <div class="text-center mb-3 mt-3">
+            <p>Welcome - <strong>{{ Recipes.author.first_name }} {{ Recipes.author.last_name}}</strong></p>
             <p>Here you can find all of your own recipe's that you have created and uploaded to the platform.<br>
             If you wish to make an edit or delete a recipe please select that button from the cards and follow the next steps</p>
         </div>

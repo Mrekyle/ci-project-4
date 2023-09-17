@@ -7,29 +7,29 @@ Add admin accounts/generic accounts for submission
 Add 10 recipes to database - 3 users 
 Create readme - dropdown for images
 manual testing html/js/python/lighthouse/css
-Update github projects 
+Update github projects - USER STORY:
 Rename the applications/files
 Enable auto Deploys 
+Add aria labels/semenatic code
+Add code block comments
 
 TO DO:
 
-Finish all styling, responsiveness, page layouts
-Styling for recipe full screen page 
-Style recipe creation form - Add summernote editor to the recipe creation
-Add email function to reset password
-Add images and image cover text to home page 
-Python/Js Testing
-Add images upload to the app
-Add create new recipe functions with summernote editor - Page created 
-Add edit funciton
-Style recipe deletion page
-Add aria labels/semenatic code
-Add code block comments
-Fix bug on recipes page with auth.user.none - users likes 
 Add comments to recipe page page and likes 
 Add search to recipes page 
+Add images upload to the app 
+Add email function to reset password
+Python/Js Testing
+Fix bug on recipes page with auth.user.none - users likes 
+Edit date time field model to show just date created not the time stamp
 
-On user page, Add in place to set first and last name. change password and email. - Change all instances of author to first and last name of the user. but leave user logged in as user.
+Finish all styling, responsiveness, page layouts
+Styling for recipe full screen page 
+Add images and image cover text to home page - Slider js
+Style edit form
+Style recipe deletion page
+
+On user page, Add in place to set first and last name. change password and email. 
 
 Maybe:
  

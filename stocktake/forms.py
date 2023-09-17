@@ -11,7 +11,7 @@ class createRecipe(forms.ModelForm):
 
             'title': forms.TextInput(attrs={'class': 'form-control', 'id': 'recipe-title form4Example3', 'rows': '4'}),
             'author': forms.HiddenInput(attrs={'class': 'form-control', 'placeholder': '', 'id': 'author_id', 'value': ''}),
-            'recipe_desc': forms.Textarea(attrs={'class': 'form-control'}),
+            'recipe_desc': forms.TextInput(attrs={'class': 'form-control'}),
             'recipe_story': forms.Textarea(attrs={'class': 'form-control'}),
             'ingredients_list': forms.Textarea(attrs={'class': 'form-control'}),
             'methods_list': forms.Textarea(attrs={'class': 'form-control'}),

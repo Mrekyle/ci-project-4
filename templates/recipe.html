@@ -31,7 +31,7 @@
                                     </div>
                                     <div class="">
                                       <hr>
-                                        <p class="card-text text-muted">Author: {{ Recipes.author }} |  {{ Recipes.created_on }}</p>
+                                        <p class="card-text text-muted">Author: {{ Recipes.author.first_name }} {{ Recipes.author.last_name}} |  {{ Recipes.created_on }}</p>
                                         {% with Comments.all.count as comments_count %}
                                           <p><i class="fa-regular fa-comments fa-sm">{{ comments_count }}</i> | <i class="fa-regular fa-thumbs-up fa-sm">{{ Recipes.likes }} FIX BUG</i></p>
                                         {% endwith %}

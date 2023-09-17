@@ -10,7 +10,7 @@
             <form method="POST">
                 {% csrf_token %}
                 <div class="mb-6">
-                    <p>Are you sure you wish to delete {{ Recipes.title }}?</p>
+                    <p>Are you sure you wish to delete your recipe - <strong>{{ recipes.title }}?</strong></p>
                     <p>This action cant be undone and is permanent.</p>
                 </div>
                 <div class="mb-6">
