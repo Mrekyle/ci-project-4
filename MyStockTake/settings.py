@@ -54,7 +54,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'django_summernote',
-    'stocktake'
+    'stocktake',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
