@@ -38,7 +38,7 @@
                                         </a>
                                         <hr>
                                         <div class="card-text text-center flex-container">
-                                            <button class="ps-2 pe-2 pb-2 pt-2 btn btn-edit" type="button"><a href="{% url 'recipe_edit' %}" aria-label="Opens the edit recipe page">Edit</a></button>
+                                            <button class="ps-2 pe-2 pb-2 pt-2 btn btn-edit" type="button"><a href="{% url 'recipe_edit' Recipes.pk %}" aria-label="Opens the edit recipe page">Edit</a></button>
                                             <button class='ps-2 pe-2 pb-2 pt=2 btn btn-delete' type="button"><a href="{% url 'delete_recipe' Recipes.pk %}" aria-label="Opens the delete recipe page">Delete</a></button>
                                         </div>
                                     </div>

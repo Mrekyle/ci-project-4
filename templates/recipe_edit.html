@@ -3,20 +3,30 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-    <div class="container-fluid header-size">
+    <div class="container-fluid header-size recipe-container">
         <div class="row">
-            <h1 class="header-size">{{ recipe.title }}</h1>
-            {% if user.id == Recipes.author.id %}
-                {% Recipes.methods_list %}
-            {% endif %}
-            <h2>Hello world</h2>
+            <h2 class="text-center pt-4">Edit - {{ recipes.title }} | {{ recipes.author.first_name }} {{ recipes.author.last_name }}</h2>
+            <p class="text-center mb-4"></p>
         </div>
-        <div class="row">
-            <button type="submit" id="save-btn" class="btn btn-delete me-6">Save & Submit</button>
-            <button type="submit" id="delete-btn" class="btn btn-delete me-6">Delete</button>
+
+        <div>
+            <form method="POST" action="">
+                {% csrf_token %}
+                {{ form.as_p }}
+                    
+                    <div>
+                        <button type="submit" class="btn btn-primary btn-block mb-4">Save & Edit</button>
+                        <button type="submit" class="btn btn-block mb-4 btn-delete"><a href="">Delete</a></button>
+                    </div>
+            </form>
+        </div>
         </div>
     </div>
-
+    <script>
+        let userId = '{{ user.id }}';
+        document.getElementById('author_id').value = userId
+    </script>
+    
 {% else %}
     <div class="container header-size text-center">
         <h3>Unfortunately we do not know you! But we'd love to get to know you. So please join us on our adventure.</h3>
@@ -24,4 +34,4 @@
         <a href="{% url 'pricing' %}" aria-label="Opens the Pricing page to allow the user to see what we offer"><button class="btn btn-rounded mb-5 btn-dark">What We Offer</button></a>
     </div>
 {% endif %}
-{% endblock %}
+{% endblock %} 

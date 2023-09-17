@@ -62,10 +62,11 @@ class renderMyRecipes(generic.ListView):
     paginate_by = 9 
 
 
-class renderRecipeEdit(generic.DetailView):
+class renderRecipeEdit(generic.UpdateView):
 
     model = Recipes
     template_name = 'recipe_edit.html'
+    form_class = createRecipe
 
 class renderRecipeDelete(generic.DeleteView):
 
