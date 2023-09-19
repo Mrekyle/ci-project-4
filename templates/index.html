@@ -3,7 +3,7 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-<div class="container header-size">
+<div class="container index-header header-size">
     <div class="row">
         <div class="text-center">
             <h3>Get Started</h3>
@@ -36,16 +36,17 @@
         <div class="row">
             <div class="col-12 mt-3 left">
                 <div class="row d-flex justify-content-center">
+                    <!-- Latest Recipe Cards -->
                     {% for Recipes in recipes_list %}
                         <div class="col-md-4">
-                            <div class="card mb-4 hover-shadow .shadow-6">
+                            <div class="card card-size mb-4 hover-shadow .shadow-6">
                                 <div class="card-body">
                                       <a href="{% url 'recipe_page' Recipes.pk %}" aria-label="Opens the recipe in a full screen view" class="card-link">
                                         <div class="image-container masthead-text masthead-image">
                                           {% if 'placeholder' in Recipes.featured_image.url %}
-                                            <img class="card-img card-image" src="https://res.cloudinary.com/dcjikvzf6/image/upload/v1692107043/cld-sample-4.jpg" alt="Recipe Image">
+                                            <img class="card-img indx-img" src="https://res.cloudinary.com/dcjikvzf6/image/upload/v1692107043/cld-sample-4.jpg" alt="Recipe Image">
                                           {% else %}
-                                            <img class="card-img card-image" src="{{ Recipes.featured_image.url }}" alt="Users image of there recipe">
+                                            <img class="card-img indx-img" src="{{ Recipes.featured_image.url }}" alt="Users image of there recipe">
                                           {% endif %}
                                         </div>
                                         <div class="">
@@ -58,9 +59,6 @@
                                         <div class="">
                                           <hr>
                                             <small><p class="card-text text-muted">Author: {{ Recipes.author }} |  {{ Recipes.created_on }}</p></small>
-                                            {% with Comments.all.count as comments_count %}
-                                              <p><i class="fa-regular fa-comments fa-sm">{{ comments_count }}</i> | <i class="fa-regular fa-thumbs-up fa-sm">{{ Recipes.likes }} FIX BUG</i></p>
-                                            {% endwith %}
                                         </div>
                                   </div>
                             </div>
@@ -78,6 +76,7 @@
       {% endif %}
     </div>
 </div>
+<!-- If the user isn't authenticated  -->
 {% else %}
     <div class="container header-size">
         <div class="index-slider">

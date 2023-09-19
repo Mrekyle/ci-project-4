@@ -3,7 +3,7 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-    <div class="container-fluid header-size recipe-container">
+    <div class="container header-size recipe-container">
         <div class="row">
             <h2 class="text-center pt-4">Create a new recipe to add to our ever growing database.</h2>
             <p class="text-center mb-4">Create a new recipe by filling out all the information required below. <br>
@@ -11,19 +11,19 @@
                 (if not, our default will be provided for you.)</p>
         </div>
 
-        <div>
+        <div class="text-center">
             <form method="POST" action="">
                 {% csrf_token %}
                 {{ form.media }}
                 {{ form.as_p }}
                     
                     <div>
-                        <button type="submit" class="btn btn-primary btn-block mb-4">Create your recipe</button>
+                        <button type="submit" class="btn btn-primary mb-4">Create your recipe</button>
                     </div>
             </form>
         </div>
         </div>
-    </div>
+    </div> 
     <script>
         let userId = '{{ user.id }}';
         document.getElementById('author_id').value = userId

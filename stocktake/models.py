@@ -20,7 +20,6 @@ class Recipes(models.Model):
     methods_list = RichTextField(blank=True, null=True)
     recipe_story = RichTextField(blank=True, null=True)
     status = models.IntegerField(choices=STATUS, default=1)
-    likes = models.ManyToManyField(User, related_name='recipe_likes', blank=True)
     featured_image = CloudinaryField('image', default='placeholder')
 
     class Meta:
@@ -31,20 +30,3 @@ class Recipes(models.Model):
     
     def get_absolute_url(self):
         return reverse('home')
-
-
-class Comment(models.Model):
-    """
-    Model for the comments on the recipe
-    """
-    recipe = models.ForeignKey(Recipes, on_delete=models.CASCADE, related_name='comments')
-    name = models.CharField(max_length=20)
-    email = models.EmailField()
-    body = models.TextField()
-    created_on = models.DateTimeField(auto_now_add=True)
-
-    class Meta:
-        ordering = ['created_on']
-
-    def __str__(self):
-        return f'Comment {self.body} by {self.name}'
