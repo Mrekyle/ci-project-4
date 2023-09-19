@@ -2,17 +2,17 @@
 "Signup" %}{% endblock %} {% block content %}
 <div class="container header-size pt-4 mb-12 text-center">
   <div class="row">
-    <div class="col-md-8 mt-1 offset-md-2">
+    <div class="col-md-8 mt-1 offset-md-2 mb-4">
       <h3>{% trans "Sign Up" %}</h3>
 
-      <p>
+      <p class="mb-4">
         Welcome to myRecipe. <br>
         Already have an account? Then please <a class="link" href="{{ login_url }}">log in</a> instead. <br>
         If not please join us by continuing.
       </p>
     </div>
   </div>
-  <div class="row">
+  <div class="row ">
     <div class="col-md-8 mt-1 offset-md-2">
       <form
         class="signup"
@@ -27,7 +27,7 @@
           value="{{ redirect_field_value }}"
         />
         {% endif %}
-        <button class="btn btn-signup right" type="submit">
+        <button class="btn btn-signup right mb-7" type="submit">
           {% trans "Sign Up" %} &raquo;
         </button>
       </form>

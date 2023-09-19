@@ -12,6 +12,7 @@ Rename the applications/files
 Enable auto Deploys 
 Add aria labels/semenatic code
 Add code block comments
+Database design image 
 
 TO DO:
 
@@ -22,14 +23,16 @@ Add email function to reset password
 Python/Js Testing
 Fix bug on recipes page with auth.user.none - users likes 
 Edit date time field model to show just date created not the time stamp
-
-Finish all styling, responsiveness, page layouts
-Styling for recipe full screen page 
 Add images and image cover text to home page - Slider js
+On user page, Add in place to set first and last name. change password and email. 
+
+STYLING:
+
+Finish all styling, responsiveness, page layouts, Media Querys
+Styling for recipe full screen page 
 Style edit form
 Style recipe deletion page
 
-On user page, Add in place to set first and last name. change password and email. 
 
 Maybe:
  

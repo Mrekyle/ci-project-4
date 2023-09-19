@@ -24,8 +24,9 @@
           value="{{ redirect_field_value }}"
         />
         {% endif %}
-        <p>Forgotten your password? Request a reset <a href="{% url 'account_reset_password' %}" aria-label="Opens a link to the password reset page"><strong>Here</strong></a></p>
-        <button class="btn btn-signup right" type="submit">
+        <p>Forgotten your password? Request a reset by submitting a request on our contact form <a href="{% url 'contact' %}"><strong>Here!</strong></a>
+          <br>Just be sure to include your First Name, Username and email linked to your account</p>
+        <button class="btn btn-signup right mb-8" type="submit">
           {% trans "Sign In" %}
         </button>
       </form>

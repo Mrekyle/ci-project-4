@@ -74,7 +74,12 @@ html, body {
 }
 
 .card-image {
-    height: 230px;
+    height: 260px;
+    width: 100%;
+}
+
+.card-image-myrcp {
+    height: 280px;
     width: 100%;
 }
 
@@ -91,6 +96,12 @@ html, body {
 .btn-delete:hover {
     background-color: rgb(255, 0, 0);
     text-decoration: none;
+}
+
+.btn-update:hover {
+    background-color: rgb(0, 132, 255);
+    text-decoration: none;
+    color: whitesmoke;
 }
 
 .underline {
@@ -118,4 +129,20 @@ html, body {
 
 .recipe-container {
     width: 60%;
+}
+
+.email-hr {
+    width: 80%;
+}
+
+.user-container {
+    height: 25rem;
+}
+
+.email-container {
+    height: 21rem;
+}
+
+.contact-container {
+    height: 11rem;
 }

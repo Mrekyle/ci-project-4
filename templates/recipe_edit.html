@@ -5,7 +5,7 @@
 {% if user.is_authenticated %}
     <div class="container-fluid header-size recipe-container">
         <div class="row">
-            <h2 class="text-center pt-4">Edit - {{ recipes.title }} | {{ recipes.author.first_name }} {{ recipes.author.last_name }}</h2>
+            <h2 class="text-center pt-4">Edit - {{ recipes.title }} | {{ recipes.author }}</h2>
             <p class="text-center mb-4"></p>
         </div>
 
@@ -15,9 +15,9 @@
                 {{ form.media }}
                 {{ form.as_p }}
                     
-                    <div>
-                        <button type="submit" class="btn btn-primary btn-block mb-4">Save & Edit</button>
-                        <button type="submit" class="btn btn-block mb-4 btn-delete"><a href="">Delete</a></button>
+                    <div class="d-flex justify-content-md-evenly mt-3 mb-6">
+                        <button type="submit" class="btn btn-update ps-2 pe-2 pb-2 pt-2" aria-label="Saves the new version of the recipe">Save & Edit</button>
+                        <button class='ps-2 pe-2 pb-2 pt-2 btn btn-delete' type="button" aria-label="Opens the delete recipe page">Delete</button>
                     </div>
             </form>
         </div>

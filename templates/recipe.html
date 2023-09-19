@@ -4,15 +4,15 @@
 {% if user.is_authenticated %}
 <div class="container-fluid header-size ms-4">
   <div class="page-title">
-    <h1 class="pt-3">Our Recipes</h1>
+    <h1 class="pt-3 mb-4">Our Recipes</h1>
   </div>
-    <div class="row mt-4 mb-6">
+    <div class="row mt-4 mb-10">
         <div class="col-12 mt-3 left">
             <div class="row d-flex justify-content-center">
               <!-- Recipe card - Displaying multiple cards paginated -->
                 {% for Recipes in recipes_list %}
                     <div class="col-md-3">
-                      <div class="card mb-4">
+                      <div class="card mb-10 hover-shadow .shadow-6">
                             <div class="card-body">
                                   <a href="{% url 'recipe_page' Recipes.pk %}" aria-label="Opens the recipe in a full screen view" class="card-link">
                                     <div class="image-container masthead-text masthead-image">
@@ -31,7 +31,7 @@
                                     </div>
                                     <div class="">
                                       <hr>
-                                        <p class="card-text text-muted">Author: {{ Recipes.author.first_name }} {{ Recipes.author.last_name}} |  {{ Recipes.created_on }}</p>
+                                        <p class="card-text text-muted">Author: {{ Recipes.author }} |  {{ Recipes.created_on }}</p>
                                         {% with Comments.all.count as comments_count %}
                                           <p><i class="fa-regular fa-comments fa-sm">{{ comments_count }}</i> | <i class="fa-regular fa-thumbs-up fa-sm">{{ Recipes.likes }} FIX BUG</i></p>
                                         {% endwith %}
