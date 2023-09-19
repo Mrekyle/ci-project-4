@@ -9,6 +9,7 @@
             <p class="text-center mb-4"></p>
         </div>
 
+        <!-- Recipe edit form. Populating the form with the current information -->
         <div class="text-center">
             <form method="POST" action="">
                 {% csrf_token %}
@@ -23,6 +24,8 @@
         </div>
         </div>
     </div>
+
+    <!-- Setting the author of the recipe as the current logged in user  -->
     <script>
         let userId = '{{ user.id }}';
         document.getElementById('author_id').value = userId

@@ -11,6 +11,7 @@
                 (if not, our default will be provided for you.)</p>
         </div>
 
+        <!-- Recipe Creation form. Using the forms.py to create the form  -->
         <div class="text-center">
             <form method="POST" action="">
                 {% csrf_token %}
@@ -24,6 +25,8 @@
         </div>
         </div>
     </div> 
+    
+    <!-- Setting the forms author as the user that is currently logged into the application  -->
     <script>
         let userId = '{{ user.id }}';
         document.getElementById('author_id').value = userId

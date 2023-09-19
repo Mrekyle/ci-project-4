@@ -10,6 +10,7 @@
         <h2 class="mt-4">Welcome {{ user.username }}</h2>
         <p class="pt-2">Welcome to the accounts page. Here you can add and edit your account information.<br> Fill out the forms below to tell us more about yourself</p>
     </div>
+    <!-- Allowing the user a quick way to change there password  -->
     <div class="container-fluid">
         <div class="d-flex mb-6">
             <div class="col-md-6">
@@ -18,6 +19,7 @@
                     <button class="ps-3 pe-3 btn btn-update mt-4" type="submit" name="action"><a href="{% url 'account_reset_password' %}" aria-label="Opens the update and change password page">Change Password</a></button>
                 </div>
             </div>
+            <!-- Allowing the user to add/change the email on the account  -->
             <div class="col-md-6">
                 <h4>Change Email</h4>
                 <div>
