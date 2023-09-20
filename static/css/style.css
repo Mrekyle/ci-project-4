@@ -1,3 +1,5 @@
+/* Utilities  */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +12,90 @@ html, body {
     position: absolute;
 }
 
+.header-size {
+    margin-top: 6rem;
+}
+
+.user-container {
+    height: 25rem;
+}
+
+.email-container {
+    height: 21rem;
+}
+
+.container-main {
+    height: 12rem;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.email-hr {
+    width: 80%;
+}
+
+.contact-container {
+    height: 11rem;
+}
+
+.container-block {
+    height: 8rem;
+}
+
+.recipe-container {
+    width: 60%;
+}
+
+/* Navbar */
+
+.navbar-main {
+    margin-right: -9.1rem;
+}
+
+.user-main {
+    margin-top: -1.3rem;
+    margin-right: 1rem;
+}
+
+/* Index Page */
+
+.main-title {
+    font-size: 1.9rem;
+    margin-left: 2rem;
+}
+
+.index-slider {
+    height: 35rem;
+}
+
+.index-text {
+    max-width: 80rem;
+}
+
+.img-size {
+    height: 35rem;
+    width: 100%;
+}
+
+/* Contact Page  */
+
+.contact-form {
+    margin-top: 4rem;
+    width: 55%;
+    margin-bottom: 13rem;
+}
+
+/* Create Recipe */
+
+.create-recipe {
+    margin-top: -3.4rem;
+    margin-right: 3rem;
+}
+
+/* Footer */
+
 .git-link {
     color: white;
     font-size: 1.4rem;
@@ -20,74 +106,12 @@ html, body {
     color: white;
 }
 
-.header-size {
-    margin-top: 6rem;
-}
+/* Buttons  */
 
-.index-slider {
-    height: 35rem;
+.btn > a {
+    text-decoration: none;
+    color: black;
 }
-
-.pricing-cards {
-    list-style: none;
-}
-
-.index-text {
-    max-width: 80rem;
-}
-
-.contact-form {
-    margin-top: 4rem;
-    width: 55%;
-    margin-bottom: 13rem;
-}
-
-.recipe-title {
-    padding-top: 0.3rem;
-    font-size: 1.3rem;
-}
-
-.recipe-subtitle {
-    padding-top: 0.3rem;
-}
-
-.container-main {
-    height: 12rem;
-}
-
-.user-main {
-    margin-top: -1.3rem;
-    margin-right: 1rem;
-}
-
-.navbar-main {
-    margin-right: -9.1rem;
-}
-
-.main-title {
-    font-size: 1.9rem;
-    margin-left: 2rem;
-}
-
-.card-image {
-    height: 260px;
-    width: 100%;
-}
-
-.indx-img {
-    height: 260px;
-    width: 100%;
-}
-
-.card-image-myrcp {
-    height: 280px;
-    width: 100%;
-}
-
-.recipe-page-img {
-    height: 350px;
-    width: 620px;
-}  
 
 .btn-back {
     border: solid 1px #444544;
@@ -113,18 +137,10 @@ html, body {
     color: whitesmoke;
 }
 
-.underline {
-    text-decoration: underline;
-}
+/* Card Styling */
 
-.create-recipe {
-    margin-top: -3.4rem;
-    margin-right: 3rem;
-}
-
-.btn > a {
-    text-decoration: none;
-    color: black;
+.card-size {
+    width: 80%;
 }
 
 .card-body > a {
@@ -132,47 +148,44 @@ html, body {
     color: black;
 }
 
-.container-block {
-    height: 8rem;
-}
-
-.recipe-container {
-    width: 60%;
-}
-
-.email-hr {
-    width: 80%;
-}
-
-.user-container {
-    height: 25rem;
-}
-
-.email-container {
-    height: 21rem;
-}
-
-.contact-container {
-    height: 11rem;
+.pricing-cards {
+    list-style: none;
 }
 
 .recipe-card-body {
     padding: 1.4rem;
 }
 
-.card-size {
-    width: 80%;
-}
-
-.img-size {
-    height: 35rem;
+.card-image {
+    height: 260px;
     width: 100%;
 }
 
+.card-image-myrcp {
+    height: 280px;
+    width: 100%;
+}
+
+.recipe-page-img {
+    height: 350px;
+    width: 620px;
+}  
+
+.recipe-title {
+    padding-top: 0.3rem;
+    font-size: 1.3rem;
+}
+
+.recipe-subtitle {
+    padding-top: 0.3rem;
+}
+
+/* Media Query  */
+
 @media screen and (max-width: 400px) {
-
+    
     /* Base Template */
-
+    
     .user-main {
         display: none;
         opacity: 0%;
