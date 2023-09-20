@@ -1,16 +1,16 @@
 {% extends "base.html" %} {% load i18n %} {% block head_title %}{% trans "Sign
 Out" %}{% endblock %} {% block content %}
-<div class="container header-size mb-10 mt-6">
+<div class="container header-size mb-2 mt-6">
   <div class="row">
-    <div class="col-md-8 mt-4 offset-md-2 text-center mb-3">
+    <div class="col-md-8 mt-4 offset-md-2 text-center mb-6">
       <h3 class="logout">{% trans "Sign Out" %}</h3>
 
       <p class="mt-4">{% trans 'Thank you for using the myRecipe platform!' %}</p>
       <p>{% trans 'Are you sure you want to sign out?' %}</p>
     </div>
   </div>
-  <div class="row mb-12">
-    <div class="col-md-8 mt-3 offset-md-2 mb-10">
+  <div class="row mb-10">
+    <div class="col-md-8 mt-3 offset-md-2 mb-9">
       <form class="mb-8" method="post" action="{% url 'account_logout' %}">
         {% csrf_token %} {% if redirect_field_value %}
         <input
@@ -26,5 +26,5 @@ Out" %}{% endblock %} {% block content %}
     </div>
   </div>
 </div>
-<div class="contact-container mb-4"></div>
+<div class="logout-container"></div>
 {% endblock %}

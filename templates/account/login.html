@@ -3,10 +3,10 @@
 
 <div class="container header-size">
   <div class="row">
-    <div class="col-md-8 mt-3 offset-md-2 text-center pt-3">
+    <div class="col-md-8 offset-md-2 text-center">
       <h3>{% trans "Sign In" %}</h3>
 
-      <p class="me-3 me-3">
+      <p class="me-3">
         {% blocktrans %} Welcome back to myRecipe. <br>
         Please log in to see your recipe's or create new ones,
         If you have not created an account yet, then please <a class="link" href="{{ signup_url }}"> Sign Up</a>
@@ -14,7 +14,7 @@
       </p>
     </div>
   </div>
-  <div class="row mb-12 text-center ">
+  <div class="row mb-6 text-center ">
     <div class="col-md-8 mt-4 mb-1 offset-md-2">
       <form class="login" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %} {{ form.as_p }} {% if redirect_field_value %}
@@ -26,7 +26,7 @@
         {% endif %}
         <p>Forgotten your password? Request a reset by submitting a request on our contact form <a href="{% url 'contact' %}"><strong>Here!</strong></a>
           <br>Just be sure to include your First Name, Username and email linked to your account</p>
-        <button class="btn btn-signup right mb-8" type="submit">
+        <button class="btn btn-signup right mb-5" type="submit">
           {% trans "Sign In" %}
         </button>
       </form>

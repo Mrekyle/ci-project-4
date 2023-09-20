@@ -13,11 +13,23 @@ html, body {
 }
 
 .header-size {
-    margin-top: 6rem;
+    margin-top: 4rem;
+}
+
+.minus-header {
+    margin-top: -1rem;
+}
+
+.header-alert {
+    margin-top: 5rem;
 }
 
 .user-container {
-    height: 25rem;
+    height: 12.8rem;
+}
+
+.logout-container {
+    height: 1.5rem;
 }
 
 .email-container {
@@ -25,7 +37,7 @@ html, body {
 }
 
 .container-main {
-    height: 12rem;
+    height: 10rem;
 }
 
 .underline {
@@ -34,10 +46,6 @@ html, body {
 
 .email-hr {
     width: 80%;
-}
-
-.contact-container {
-    height: 11rem;
 }
 
 .container-block {
@@ -82,9 +90,9 @@ html, body {
 /* Contact Page  */
 
 .contact-form {
-    margin-top: 4rem;
+    margin-top: 2rem;
     width: 55%;
-    margin-bottom: 13rem;
+    margin-bottom: 11.6rem;
 }
 
 /* Create Recipe */
