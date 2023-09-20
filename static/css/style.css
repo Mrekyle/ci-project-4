@@ -164,6 +164,10 @@ html, body {
     width: 80%;
 }
 
+.img-size {
+    height: 35rem;
+    width: 100%;
+}
 
 @media screen and (max-width: 400px) {
 

@@ -3,13 +3,9 @@ Pre Deployment:
 
 Set debug to false
 Remove collect static on heroku
-Add admin accounts/generic accounts for submission
 Add 10 recipes to database - 3 users 
-Create readme - dropdown for images
-manual testing html/js/python/lighthouse/css
-Update github projects - USER STORY:
+manual testing 
 Enable auto Deploys 
-Add code block comments
 Database design image 
 
 TO DO:
