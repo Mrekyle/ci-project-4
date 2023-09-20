@@ -26,20 +26,6 @@ Link to live myRecipe project: [myRecipe - CI Project Four - Full Stack Framewor
 
 ## The Project
 
-<details>
-<summary>User Login Information</summary>
-<br>
-
-- Super User - Staff
-    - admin
-    - Chocolate123!
-- Andrew - Normal User
-    - Andrew 
-    - Hello123!
-- Holly - Normal User
-    - Holly 
-    - Hello123!
-</details>
 
 ### Project Goals
 
@@ -78,10 +64,11 @@ Whilst the wire frames may not be accurate to the device screen size. The design
 
 <img alt="Recipe and CRUD Pages" height="350px" src="./static/media/recipe-crud.png">
 
+### Database Design 
+
+<img alt="Recipe database design" height="350px" src="./static/media/databasedesign.png">
+
 </details>
-
-### Manual Testing
-
 
 <details>
 <summary>Features</summary>
@@ -194,4 +181,8 @@ All images that are found in the recipes on the application are found from other
 - BBC Good food
 
 All the images that are displayed on the application itself are from the application.
+
+### Favicon 
+
+Favicon was generated using favicon.io
 

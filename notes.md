@@ -2,16 +2,16 @@
 Pre Deployment:
 
 Set debug to false
-Remove collect static on heroku
-Add 10 recipes to database - 3 users 
-manual testing 
+Remove collect static on heroku 
 Enable auto Deploys 
-Database design image 
+Manuel Testing
+add accounts/passwords to google submission form 
 
 TO DO:
 
 Add images upload to the app - If it comes to it. remove uploading images - Change default to 0 remove image and change to input to provide link o image for thr recipe 
-Python/Js Testing
+Add alerts for log in/out/posting/editing
+Python user creation tests, recipe creation test 
 
 STYLING:
 
@@ -20,7 +20,6 @@ STYLING:
 Maybe:
  
 Update page selection in main navbar
-Add alerts for log in/out/posting/editing
 Add breadcrumb navigation to the application under the header/navbar
 Dark Mode
 Add random image generator to the registered users home page
