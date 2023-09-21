@@ -19,8 +19,8 @@ class Recipes(models.Model):
     ingredients_list = RichTextField(blank=True, null=True)
     methods_list = RichTextField(blank=True, null=True)
     recipe_story = RichTextField(blank=True, null=True)
-    status = models.IntegerField(choices=STATUS, default=1)
-    featured_image = CloudinaryField('image', default='placeholder')
+    status = models.IntegerField(choices=STATUS, default=0)
+    featured_image = CloudinaryField('image')
 
     class Meta:
         ordering = ['-created_on']
