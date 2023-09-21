@@ -1,9 +1,6 @@
-# Quizzels
+# myRecipe
 
 Link to live myRecipe project: [myRecipe - CI Project Four - Full Stack Frameworks]()
-
-<img alt="Responsive website testing" src="">
-
 
 ## Table of Contents 
 1. The Project
@@ -125,10 +122,16 @@ During the development of the Project it has been subjected to different testing
 
 | Test | Intended Result | Result |
 |------|-----------------|--------|
-|Start button press | To start the quiz and display the first question | Passed |
-|Next button press | To click through to the next question and check if correct | Passed |
-|Reset button press | To reset the quiz once completed | Passed |
-|Color change | Color change on buttons based on correct an wrong answers | Passed | 
+| Navigation | All pages are correctly linked together with the correct navigation | Passed |
+| User Registration | Users can register to the application to create an account | Passed |
+| User Logout | User can successfully logout of their account | Passed |
+| User Login | User can successfully login into their account | Passed |
+| Contact Form | Users(registered and not) can submit the contact form to the admins. Showing a success message on successful submission | passed|
+| Access restricted | Users who are not logged into their account cannot access certain information | Passed |
+| View Recipes | User can view all recipes posted to the application | Passed |
+| View Own Recipes | User can see all of their own recipes they have posted in one single place | Passed |
+| Edit Recipe | User can edit any of their own recipes. With the updates being displayed and posted to the database immediately | Passed |
+| Delete Recipe | User can delete any of their own recipes. With a warning page being displayed. Any action taking immediate effect | Passed |
 
 ## Bugs
 

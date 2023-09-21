@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect
 from django.views import generic
 from .models import Recipes
 from .forms import createRecipe
@@ -33,7 +33,6 @@ class renderRecipeCreation(generic.CreateView):
     model = Recipes
     form_class = createRecipe
     template_name = 'recipe_create.html'
-
 
 class renderIndex(generic.ListView):
     
