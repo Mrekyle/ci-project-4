@@ -12,23 +12,23 @@
     </div>
     <!-- Allowing the user a quick way to change there password  -->
     <div class="container-fluid">
-        <div class="d-flex mb-6">
+        <div class="d-flex mb-5">
             <div class="col-md-6">
                 <h4>Change Password</h4>
                 <div>
-                    <button class="ps-3 pe-3 btn btn-update mt-4" type="submit" name="action"><a href="{% url 'account_reset_password' %}" aria-label="Opens the update and change password page">Change Password</a></button>
+                    <button class="ps-3 pe-3 btn btn-light btn-outline-secondary btn-update mt-4" type="submit" name="action"><a href="{% url 'account_reset_password' %}" aria-label="Opens the update and change password page">Change Password</a></button>
                 </div>
             </div>
             <!-- Allowing the user to add/change the email on the account  -->
-            <div class="col-md-6">
+            <div class="col-md-6 mb-4">
                 <h4>Change Email</h4>
                 <div>
-                    <button type="button" class="btn btn-update mt-4"><a href="{% url 'account_email' %}" aria-label="Opens the add or change an email on your account">Change Email</a></button>
+                    <button type="button" class="btn btn-light btn-update btn-outline-secondary mt-4 mb-5"><a href="{% url 'account_email' %}" aria-label="Opens the add or change an email on your account">Change Email</a></button>
                 </div>
             </div>
         </div>
     </div>
-    <div class="user-container"></div>
+    <div class="user-container mb-5"></div>
 </div>
 {% else %}
 <div class="container header-size text-center">

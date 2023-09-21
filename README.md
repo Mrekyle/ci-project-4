@@ -1,4 +1,4 @@
-# myRecipe
+# Quizzels
 
 Link to live myRecipe project: [myRecipe - CI Project Four - Full Stack Frameworks]()
 
@@ -104,8 +104,8 @@ Future features that are in development are
 During the development of the app multiple different types of technology was used and utilized to build the final application. 
 
 - HTML - Was used to create the basic web page for the project
-- CSS - Was used to style the web page and the different elements that make up the quiz
-- JS - Was used to build all the functionally of the quiz. Allowing for multiple questions, score counters and changing the appearance of elements
+- CSS - Was used to style the web page and the different elements that make up the application
+- JS - Was used to create a few simple functions for ease of use. Such as changing the date in the footer and sending emails on the contact form
 - Python - Used during the development of the back end of the application for everything that communicates with different servers and databases
 - Django - Was used as the base development framework. Allowing the use of template and and back end driven development. 
 - MDN - A bootstrap library. Allowing the use of different components and defined classes throughout the application to speed up development. (Upon review, I would choose to use the base Bootstrap library.)
@@ -122,16 +122,10 @@ During the development of the Project it has been subjected to different testing
 
 | Test | Intended Result | Result |
 |------|-----------------|--------|
-| Navigation | All pages are correctly linked together with the correct navigation | Passed |
-| User Registration | Users can register to the application to create an account | Passed |
-| User Logout | User can successfully logout of their account | Passed |
-| User Login | User can successfully login into their account | Passed |
-| Contact Form | Users(registered and not) can submit the contact form to the admins. Showing a success message on successful submission | passed|
-| Access restricted | Users who are not logged into their account cannot access certain information | Passed |
-| View Recipes | User can view all recipes posted to the application | Passed |
-| View Own Recipes | User can see all of their own recipes they have posted in one single place | Passed |
-| Edit Recipe | User can edit any of their own recipes. With the updates being displayed and posted to the database immediately | Passed |
-| Delete Recipe | User can delete any of their own recipes. With a warning page being displayed. Any action taking immediate effect | Passed |
+|Start button press | To start the quiz and display the first question | Passed |
+|Next button press | To click through to the next question and check if correct | Passed |
+|Reset button press | To reset the quiz once completed | Passed |
+|Color change | Color change on buttons based on correct an wrong answers | Passed | 
 
 ## Bugs
 
