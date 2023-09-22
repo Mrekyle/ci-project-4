@@ -1,11 +1,11 @@
 # myRecipe
 
-Link to live myRecipe project: [myRecipe - CI Project Four - Full Stack Frameworks]()
+Link to live myRecipe project: [myRecipe - CI Project Four - Full Stack Frameworks](https://ci-myrecipe-921534e8b4ab.herokuapp.com/)
 
 ## Table of Contents 
 1. The Project
     - Project Goals
-    - Initial Design (Wireframes)
+    - Initial Design
     - Manual Testing
 2. Features
     - Implemented
@@ -151,7 +151,7 @@ During the development of the application there were many different bugs along t
 
 ## Project Deployment
 
-Heroku was used to deploy the application live to the internet. The live Application can be found [Here]()
+Heroku was used to deploy the application live to the internet. The live Application can be found [Here](https://ci-myrecipe-921534e8b4ab.herokuapp.com/)
 
 If you are wanting to take a look at the code and potentially add on your own features to the project you can do so by cloning or forking the repo. By doing this it will allow you to locally develop and add your own features to the app.
 
