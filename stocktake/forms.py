@@ -1,11 +1,13 @@
-from django import forms 
-from .models import Recipes 
+from django import forms
+from .models import Recipes
+
 
 class createRecipe(forms.ModelForm):
 
     class Meta:
         model = Recipes
-        fields = ('title',  'author', 'recipe_desc', 'recipe_story', 'ingredients_list', 'methods_list', 'featured_image')
+        fields = ('title',  'author', 'recipe_desc', 'recipe_story',
+                  'ingredients_list', 'methods_list', 'featured_image')
 
         widgets = {
 
@@ -17,5 +19,3 @@ class createRecipe(forms.ModelForm):
             'methods_list': forms.Textarea(attrs={'class': 'form-control'}),
             'featured_image': forms.FileInput(attrs={'class': 'form-control'})
         }
-
-    

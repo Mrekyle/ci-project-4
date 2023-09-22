@@ -15,12 +15,11 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 IMPORTS 
 """
 
+
 from pathlib import Path
 import os
 import dj_database_url
-
-from django.contrib.messages import constants as messages 
-
+from django.contrib.messages import constants as messages
 if os.path.isfile('env.py'):
     import env
 
@@ -107,7 +106,7 @@ WSGI_APPLICATION = 'MyStockTake.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
- }
+}
 
 AUTHENTICATION_BACKENDS = [
 
@@ -160,12 +159,12 @@ STATICFILES_DIRS = [
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 
-MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 CLOUDINARY = {
-    
+
     'CLOUD_NAME': os.environ.get('CLOUD_NAME'),
     'API_KEY': os.environ.get('API_KEY'),
     'API_SECRET': os.environ.get('API_SECRET'),

@@ -1,4 +1,4 @@
-# Quizzels
+# myRecipe
 
 Link to live myRecipe project: [myRecipe - CI Project Four - Full Stack Frameworks]()
 
@@ -122,10 +122,16 @@ During the development of the Project it has been subjected to different testing
 
 | Test | Intended Result | Result |
 |------|-----------------|--------|
-|Start button press | To start the quiz and display the first question | Passed |
-|Next button press | To click through to the next question and check if correct | Passed |
-|Reset button press | To reset the quiz once completed | Passed |
-|Color change | Color change on buttons based on correct an wrong answers | Passed | 
+| Navigation | All pages are correctly linked together with the correct navigation | Passed |
+| User Registration | Users can register to the application to create an account | Passed |
+| User Logout | User can successfully logout of their account | Passed |
+| User Login | User can successfully login into their account | Passed |
+| Contact Form | Users(registered and not) can submit the contact form to the admins. Showing a success message on successful submission | passed|
+| Access restricted | Users who are not logged into their account cannot access certain information | Passed |
+| View Recipes | User can view all recipes posted to the application | Passed |
+| View Own Recipes | User can see all of their own recipes they have posted in one single place | Passed |
+| Edit Recipe | User can edit any of their own recipes. With the updates being displayed and posted to the database immediately | Passed |
+| Delete Recipe | User can delete any of their own recipes. With a warning page being displayed. Any action taking immediate effect | Passed |
 
 ## Bugs
 
@@ -139,6 +145,7 @@ During the development of the application there were many different bugs along t
 | Recipe creation form not submitting recipe | Fixed by converting the form from html to native django and python, by using the forms module |
 | No reverse match for home page | Fixed by removing the .slug prefix on the page navigation once removing the slug from the model |
 | Multiple pages receiving multiple arguments when one is required | Fixed by adding 'as_view()' to the urls when the views were converted |
+| Users image not uploading to the application when submitting the 'Create a Recipe form' | Fixed by adding the 'enctype' to the form element |
 
 
 ## Project Deployment
