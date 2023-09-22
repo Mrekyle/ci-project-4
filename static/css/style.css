@@ -21,23 +21,31 @@ html, body {
 }
 
 .header-alert {
-    margin-top: 5rem;
+    margin-top: 6rem;
 }
 
 .user-container {
-    height: 12.8rem;
+    height: 6.2rem;
 }
 
 .logout-container {
-    height: 1.5rem;
+    height: 0.4rem;
 }
 
 .email-container {
-    height: 21rem;
+    height: 4.4rem;
+}
+
+.password-container {
+    height: 14rem;
+}
+
+.contact-container {
+    height: 6.2rem;
 }
 
 .container-main {
-    height: 10rem;
+    height: 19rem;
 }
 
 .underline {
@@ -92,7 +100,7 @@ html, body {
 .contact-form {
     margin-top: 2rem;
     width: 55%;
-    margin-bottom: 11.6rem;
+    margin-bottom: 5.3rem;
 }
 
 /* Create Recipe */

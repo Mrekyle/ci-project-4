@@ -8,10 +8,9 @@ add accounts/passwords to google submission form
 
 TO DO:
 
-Add alerts for log in/out/posting/editing
-Python user creation tests, recipe creation test 
-
 STYLING:
+
+Fix any styling for laptop mac screen
 
 Maybe:
  

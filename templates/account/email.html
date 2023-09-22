@@ -35,13 +35,13 @@
 
   <div class="buttonHolder mt-4">
         <button class="secondaryAction btn btn-update" type="submit" name="action_primary" >{% trans 'Make Primary' %}</button>
-        <button class="primaryAction btn btn-delete" type="submit" name="action_remove" >{% trans 'Remove' %}</button>
+        <button class="primaryAction btn btn-delete ms-3" type="submit" name="action_remove" >{% trans 'Remove' %}</button>
   </div>
 
   </fieldset>
   </form>
 </div>
-<div class="container mt-5 mb-5">
+<div class="container mt-4 mb-4">
   <hr>
 </div>
 
@@ -62,6 +62,11 @@
     </div>
     <div class="container mt-5">
       <hr>
+      <div class="d-flex justify-content-center">
+        <div class="row mt-4">
+          <button style="width: 6rem; font-size: 1.2rem;" class="btn btn-back ps-2 pe-2 pt-2 pb-2"><a href="{% url 'account' %}" aria-label="Goes back to the previous page"><i class="fa-solid fa-arrow-left"></i> BACK</a></button>
+        </div>
+      </div>
     </div>
     <div class="email-container"></div>
     {% endif %}

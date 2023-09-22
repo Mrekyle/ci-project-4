@@ -59,6 +59,9 @@
             </div>
         </div>
         {% if is_paginated %}
+        <div class="container">
+            <hr>
+        </div>
       <nav  aria-label="Page navigation">
         <ul class="pagination justify-content-center">
           {% if page_obj.has_previous %}
@@ -75,6 +78,7 @@
       </nav>
       {% endif %}
     </div>
+    <div class="container-main mb-4"></div>
 </div>
 
 {% else %}
