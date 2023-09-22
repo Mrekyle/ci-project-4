@@ -153,7 +153,7 @@ USE_TZ = True
 # STORAGE OPTIONS
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    os.path.join(BASE_DIR, "static"),
 ]
 
 STATIC_URL = '/static/'

@@ -98,3 +98,9 @@ class renderRecipeDelete(generic.DeleteView):
     model = Recipes
     template_name = 'recipe_delete.html'
     success_url = reverse_lazy('my_recipes')
+    form_class = createRecipe
+    success_message = "Recipe Deleted successfully"
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, self.success_message)
+        return super().delete(request, *args, **kwargs)
