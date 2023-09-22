@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views import generic
 from .models import Recipes
 from .forms import createRecipe
@@ -41,6 +41,13 @@ class renderRecipeCreation(generic.CreateView):
     form_class = createRecipe
     template_name = 'recipe_create.html'
 
+    def form_valid(self, form_class):
+
+        if form_class.is_valid():
+            form_class.save()
+            messages.success(self.request, 'Recipe created successfully')
+            return redirect('home')
+
 
 class renderIndex(generic.ListView):
 
@@ -77,6 +84,13 @@ class renderRecipeEdit(generic.UpdateView):
     model = Recipes
     template_name = 'recipe_edit.html'
     form_class = createRecipe
+
+    def form_valid(self, form_class):
+
+        if form_class.is_valid():
+            form_class.save()
+            messages.info(self.request, 'Recipe Edited successfully')
+            return redirect('home')
 
 
 class renderRecipeDelete(generic.DeleteView):

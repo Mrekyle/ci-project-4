@@ -10,8 +10,8 @@
         </div>
 
         <!-- Recipe edit form. Populating the form with the current information -->
-        <div class="text-center">
-            <form method="POST" action="">
+        <div class="text-center form-control mb-3">
+            <form method="POST" action="" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form.media }}
                 {{ form.as_p }}

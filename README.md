@@ -127,6 +127,7 @@ During the development of the Project it has been subjected to different testing
 | User Logout | User can successfully logout of their account | Passed |
 | User Login | User can successfully login into their account | Passed |
 | Contact Form | Users(registered and not) can submit the contact form to the admins. Showing a success message on successful submission | passed|
+| Contact form Clear and Message | Contact form clears itself on submission and a success message is displayed back to the user | Passed |
 | Access restricted | Users who are not logged into their account cannot access certain information | Passed |
 | View Recipes | User can view all recipes posted to the application | Passed |
 | View Own Recipes | User can see all of their own recipes they have posted in one single place | Passed |
