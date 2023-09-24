@@ -28,8 +28,12 @@ html, body {
     height: 3.4rem;
 }
 
+.contact-container{
+    height: 23rem;
+}
+
 .logout-container {
-    height: 4.4rem;
+    height: 5.2rem;
 }
 
 .email-container {
