@@ -56,20 +56,6 @@
             </div>
             </div>
         </nav>
-
-        <div class="container header-alert">
-            <div class="row pt-5 mt-5">
-                <div class="col-md-8 offset-md-2">
-                    {% for message in messages %}
-                        <div class="alert {{ message.tags }} alert-dissable fade show" id="msg" role="alert">
-                            {{ message | safe }}
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close Alert"></button> 
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-
         {% else %}
         <!-- For users that are not registered to the application -->
         <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
@@ -99,20 +85,6 @@
         </div>
         </div>
     </nav>
-
-    <div class="container header-alert">
-        <div class="row pt-5 mt-5">
-            <div class="col-md-8 offset-md-2">
-                {% for message in messages %}
-                    <div class="alert {{ message.tags }} alert-dissable fade show" id="msg" role="alert">
-                        {{ message | safe }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close Alert"></button> 
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-
     {% endif %}
     <!-- General page code blocks  -->
         {% block content %}

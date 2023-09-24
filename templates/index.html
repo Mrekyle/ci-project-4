@@ -3,6 +3,18 @@
 
 {% block content %}
 {% if user.is_authenticated %}
+<div class="container header-alert">
+  <div class="row pt-5 mt-5">
+      <div class="col-md-8 offset-md-2">
+          {% for message in messages %}
+              <div class="alert {{ message.tags }} alert-dissable fade show" id="msg" role="alert">
+                  {{ message | safe }}
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close Alert"></button> 
+              </div>
+          {% endfor %}
+      </div>
+  </div>
+</div>
 <div class="container index-header header-size">
     <div class="row">
         <div class="text-center">
@@ -80,6 +92,18 @@
 </div>
 <!-- If the user isn't authenticated  -->
 {% else %}
+<div class="container header-alert">
+  <div class="row pt-5 mt-5">
+      <div class="col-md-8 offset-md-2">
+          {% for message in messages %}
+              <div class="alert {{ message.tags }} alert-dissable fade show" id="msg" role="alert">
+                  {{ message | safe }}
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close Alert"></button> 
+              </div>
+          {% endfor %}
+      </div>
+  </div>
+</div>
     <div class="container header-size">
         <div class="index-slider mb-4">
             <!-- Carousel wrapper -->
