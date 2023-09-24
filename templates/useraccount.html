@@ -5,7 +5,7 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-<div class="container header-size text-center pt-2">
+<div class="container header-size text-center pt-5">
     <div class="row mt-4 mb-4">
         <h2 class="mt-2">Welcome {{ user.username }}</h2>
         <p class="pt-2">Welcome to the accounts page. Here you can add and edit your account information.<br> Fill out the forms below to tell us more about yourself</p>
@@ -23,7 +23,7 @@
             <div class="col-md-6">
                 <h4>Change Email</h4>
                 <div>
-                    <button type="button" class="btn btn-light btn-update btn-outline-secondary mt-4 mb-2"><a href="{% url 'account_email' %}" aria-label="Opens the add or change an email on your account">Change Email</a></button>
+                    <button type="button" class="btn btn-light btn-update btn-outline-secondary mt-4 mb-4"><a href="{% url 'account_email' %}" aria-label="Opens the add or change an email on your account">Change Email</a></button>
                 </div>
             </div>
         </div>
