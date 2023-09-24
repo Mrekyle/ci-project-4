@@ -36,7 +36,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 DEBUG = False
 
-ALLOWED_HOSTS = os.environ.get('.herokuapp.com')
+ALLOWED_HOSTS = ['ci-myrecipe-921534e8b4ab.herokuapp.com']
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
