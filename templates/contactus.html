@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<div class="header-size text-center">
+<div class="header-size mt-4 text-center">
     <h2 class="pt-1">Contact Us.</h2>
 </div>
 <!-- Contact form for authenticated and un authenticated users  -->
@@ -28,9 +28,10 @@
         
             <!-- Submit button -->
             <button type="submit" class="btn btn-primary btn-block mb-4">Send your message!</button>
-            <p class="text-muted text-center mt-2">* means the information is required</p>
+            <p class="text-muted text-center mt-2 mb-4">* means the information is required</p>
             <p id="email-success" class=" pt-2 text-center text-success text-opacity-75"></p>
         </form>
     </div>
+    <div class="container mb-4"></div>
 </div>
 {% endblock %}

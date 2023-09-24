@@ -5,8 +5,8 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-<div class="container text-center">
-    <div class="row mb-4">
+<div class="container header-size text-center">
+    <div class="row mt-4 mb-4">
         <h2 class="mt-2">Welcome {{ user.username }}</h2>
         <p class="pt-2">Welcome to the accounts page. Here you can add and edit your account information.<br> Fill out the forms below to tell us more about yourself</p>
     </div>
@@ -16,14 +16,14 @@
             <div class="col-md-6">
                 <h4>Change Password</h4>
                 <div>
-                    <button class="ps-3 pe-3 btn btn-light btn-outline-secondary btn-update mt-3" type="submit" name="action"><a href="{% url 'account_change_password' %}" aria-label="Opens the update and change password page">Change Password</a></button>
+                    <button class="ps-3 pe-3 btn btn-light btn-outline-secondary btn-update mt-4 mb-2" type="submit" name="action"><a href="{% url 'account_change_password' %}" aria-label="Opens the update and change password page">Change Password</a></button>
                 </div>
             </div>
             <!-- Allowing the user to add/change the email on the account  -->
             <div class="col-md-6">
                 <h4>Change Email</h4>
                 <div>
-                    <button type="button" class="btn btn-light btn-update btn-outline-secondary mt-4"><a href="{% url 'account_email' %}" aria-label="Opens the add or change an email on your account">Change Email</a></button>
+                    <button type="button" class="btn btn-light btn-update btn-outline-secondary mt-4 mb-2"><a href="{% url 'account_email' %}" aria-label="Opens the add or change an email on your account">Change Email</a></button>
                 </div>
             </div>
         </div>
