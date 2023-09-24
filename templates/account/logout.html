@@ -10,7 +10,7 @@ Out" %}{% endblock %} {% block content %}
     </div>
   </div>
   <div class="row mb-10">
-    <div class="col-md-8 mt-3 offset-md-2 mb-9">
+    <div class="col-md-8 mt-3 offset-md-2 mb-8">
       <form class="mb-8" method="post" action="{% url 'account_logout' %}">
         {% csrf_token %} {% if redirect_field_value %}
         <input
