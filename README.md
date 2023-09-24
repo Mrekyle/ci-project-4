@@ -171,13 +171,13 @@ By clicking the clone repo button. You are able to then clone the repo as it is.
 
 All code for the project was written by myself. Whilst using Stack Overflow, Google, various Youtube videos and Code Institute Slack Chats for reference and problem solving. 
 
-Also using various code samples from the MDN library 
+Also using various code samples from the MDN and Bootstrap library's
 
 ### Colors 
 
 The colors that were chosen for the project were picked because they were all simple yet bold colors. All contrasting each other allowing for an easy to read/view application. 
 
-<img alt="Color Pallete for the application" height="300px" src="./static/media/color-pallete.png">
+<img alt="Color Palette for the application" height="300px" src="./static/media/color-pallete.png">
 
 ### Images
 

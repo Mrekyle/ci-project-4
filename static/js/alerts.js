@@ -5,4 +5,4 @@ setTimeout(function () {
     let messages = document.getElementById('msg');
     let alerts = new bootstrap.Alert(messages);
     alerts.close();
-}, 3000);
+}, 4000);
